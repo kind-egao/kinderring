@@ -1,6 +1,17 @@
-<?php get_header(); ?>
-
 <?php
+
+/**
+ * Template Name: クリニックだより
+ */
+
+get_header();
+
+// 設定ファイルの読み込み
+require_once get_template_directory() . '/template-parts/option-news.php';
+
+// 投稿の取得
+$query = new WP_Query($args);
+
 // 曜日の日本語表記
 $weekday = array(
 	'Mon' => '月',
@@ -14,20 +25,12 @@ $weekday = array(
 ?>
 
 <div class="p-archives">
-	<p class="p-archives__ttl">
-		<?php
-		if (is_year()) {
-			echo 'クリニックだより' . '［' . get_the_date('Y') . '年度版］' . '<br class="spArea">';
-		} else {
-			single_cat_title();
-		}
-		?>
-	</p>
+	<p class="p-archives__ttl">クリニックだより</p>
 	<div class="p-archives__inner">
-		<?php if (have_posts()) : ?>
+		<?php if ($query->have_posts()) : ?>
 			<article class="p-archives__article">
 				<ul class="p-archives__article__list">
-					<?php while (have_posts()) : the_post(); ?>
+					<?php while ($query->have_posts()) : $query->the_post(); ?>
 						<li>
 							<a href="<?php the_permalink(); ?>">
 								<div>
@@ -57,9 +60,9 @@ $weekday = array(
 
 				<?php
 				// ページネーションの表示
-				if ($wp_query->max_num_pages > 1) {
+				if ($query->max_num_pages > 1) {
 					$current_page = max(1, get_query_var('paged'));
-					$total_pages = $wp_query->max_num_pages;
+					$total_pages = $query->max_num_pages;
 
 					echo '<div class="p-archives__article__pagination">';
 
@@ -109,6 +112,7 @@ $weekday = array(
 
 					echo '</div>';
 				}
+				wp_reset_postdata();
 				?>
 			</article>
 		<?php else : ?>
@@ -129,18 +133,16 @@ $weekday = array(
 				<h2>カテゴリ</h2>
 				<ul class="p-aside__content__box  -active ">
 					<li>
-						<a class="-all<?php echo is_home() ? ' -active' : ''; ?>" href="<?php echo home_url("/news"); ?>">
+						<a class="-all" href="<?php echo home_url("/news"); ?>">
 							<i class="fa-solid fa-chevron-right"></i>すべて
 						</a>
 					</li>
 					<?php
 					$categories = get_categories();
-					$current_cat = get_queried_object();
 					foreach ($categories as $category) :
-						$is_active = ($current_cat && $current_cat->term_id === $category->term_id) ? ' -current' : '';
 					?>
 						<li>
-							<a class="<?php echo $is_active; ?>" href="<?php echo get_category_link($category->term_id); ?>">
+							<a href="<?php echo get_category_link($category->term_id); ?>">
 								<i class="fa-solid fa-chevron-right"></i><?php echo $category->name; ?>
 							</a>
 						</li>
@@ -169,9 +171,7 @@ $weekday = array(
 
 					rsort($years);
 					foreach ($years as $year) {
-						$current_year = get_the_date('Y');
-						$is_current = (is_year() && $current_year == $year) ? ' -current' : '';
-						echo '<li><a class="' . $is_current . '" href="' . get_year_link($year) . '"><i class="fa-solid fa-chevron-right"></i>' . $year . '年</a></li>';
+						echo '<li><a href="' . get_year_link($year) . '"><i class="fa-solid fa-chevron-right"></i>' . $year . '年</a></li>';
 					}
 					?>
 				</ul>

@@ -18,7 +18,7 @@
         <li class="fnav__item -questionnaire"><a href="<?php echo esc_url(home_url('/questionnaire')); ?>">
             <i class="fa-regular fa-file-lines"></i>
             <span>問診票</span></a></li>
-        <li class="fnav__item -line"><a href="https://lin.ee/TK9gmTj" target="_blank">
+        <li class="fnav__item -line"><a href="https://lin.ee/pr8mQm0" target="_blank">
             <i class="fa-brands fa-line"></i>
             <span>LINE</span></a></li>
         <li class="fnav__item -contact"><a href="tel:03-5994-7250" target="_blank">

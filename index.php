@@ -1,5 +1,18 @@
 <?php get_header(); ?>
 
+<?php
+// 曜日の日本語表記
+$weekday = array(
+  'Mon' => '月',
+  'Tue' => '火',
+  'Wed' => '水',
+  'Thu' => '木',
+  'Fri' => '金',
+  'Sat' => '土',
+  'Sun' => '日'
+);
+?>
+
 <section class="slider">
   <div class="inner">
     <div id="slider">
@@ -29,35 +42,44 @@
   </div>
 </section>
 
-<section id="news" class="news">
-  <div class="inner">
-    <h1><span><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_news_icon01.png" alt="クリニックだより">クリニックだより</span></h1>
-    <ul class="list">
-
-      <?php query_posts('post_type=post&showposts=5'); ?>
+<section id="news" class="p-news">
+  <div class="p-news__inner">
+    <h1>クリニックだより</h1>
+    <ul class="p-news__list">
+      <?php query_posts('post_type=post&showposts=3'); ?>
       <?php if (have_posts()): while (have_posts()): the_post(); ?>
           <li>
-
-            <?php
-            $post_time = get_the_time('U');
-            $days = 7; //New!を表示させる日数
-            $last = time() - ($days * 24 * 60 * 60);
-            if ($post_time > $last) {
-              echo '<span class="icon">NEW</span>';
-            }
-            ?>
             <a href="<?php the_permalink(); ?>">
-              <span class="update"><?php the_time('Y年n月j日（D）'); ?>　</span> <br class="spArea"><?php the_title(); ?>
+              <div>
+                <time><?php
+                      $post_date = get_the_date('Y-m-d');
+                      $date = get_the_date('Y年n月j日');
+                      $day = date('D', strtotime($post_date));
+                      echo $date . '（' . $weekday[$day] . '）';
+                      ?></time>
+                <?php
+                // 新着記事の判定（7日以内）
+                $seven_days_ago = date('Y-m-d', strtotime('-7 days'));
+                if ($post_date >= $seven_days_ago) {
+                  echo '<span class="p-news__icon -new">NEW</span>';
+                }
+                // 重要記事の判定（カスタムフィールドで設定）
+                if (get_post_meta(get_the_ID(), 'news_important', true)) {
+                  echo '<span class="p-news__icon -important">重要</span>';
+                }
+                ?>
+              </div>
+              <p><?php the_title(); ?></p>
             </a>
           </li>
       <?php endwhile;
       endif; ?>
       <?php query_posts($query_string); ?>
     </ul>
-    <p class="tolist"><a href="<?php echo esc_url(home_url('/')); ?>news/">一覧▼</a></p>
+    <a class="p-news__link" href="<?php echo esc_url(home_url('/')); ?>news/">クリニックだより一覧 <i class="fa-solid fa-chevron-right"></i></a>
   </div>
 
-  <div class="staff">
+  <div class="p-staff">
     <a href="https://arwrk.net/recruit/svnabwqgxetojlt" target="_blank">スタッフ募集！詳しくはこちら</a>
   </div>
 </section>

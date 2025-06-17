@@ -225,6 +225,7 @@ em {
             width: 100%;
             display: block;
             font-family: 'Noto Sans Japanese', 'YuGothic', 'Yu Gothic', '游ゴシック', '游ゴシック体', sans-serif;
+            transition: all 0.3s linear;
 
             &:hover {
               color: #ee7800;

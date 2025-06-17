@@ -1,78 +1,6 @@
  <?php get_header(); ?>
 
-
- <?php if (is_page('news')) { ?>
-   <p class="pageTitle">クリニックだより</p>
-   <div class="inner">
-     <article>
-       <?php
-        $args = array(
-          'posts_per_page' => 5 // 表示件数の指定
-        );
-        $posts = get_posts($args);
-        foreach ($posts as $post) : // ループの開始
-          setup_postdata($post); // 記事データの取得
-        ?>
-         <div class="post_block">
-           <h1 class="subTitle"><span><?php the_time('Y年n月j日（D）'); ?></span><br><?php the_title(); ?></h1>
-
-
-           <p class="txt"><?php echo mb_substr($post->post_content, 0, 150) . '……'; ?></p>
-           <p class="more"><a href="<?php the_permalink(); ?>">続きを読む</a></p>
-         </div>
-       <?php
-        endforeach; // ループの終了
-        wp_reset_postdata(); // 直前のクエリを復元する
-        ?>
-
-       <div>
-         <?php global $wp_rewrite;
-          $paginate_base = get_pagenum_link(1);
-          if (strpos($paginate_base, '?') || !$wp_rewrite->using_permalinks()) {
-            $paginate_format = '';
-            $paginate_base = add_query_arg('paged', '%#%');
-          } else {
-            $paginate_format = (substr($paginate_base, -1, 1) == '/' ? '' : '/') .
-              user_trailingslashit('page/%#%/', 'paged');;
-            $paginate_base .= '%_%';
-          }
-          echo paginate_links(array(
-            'base' => $paginate_base,
-            'format' => $paginate_format,
-            'total' => $wp_query->max_num_pages,
-            'mid_size' => 4,
-            'current' => ($paged ? $paged : 1),
-            'prev_text' => '«',
-            'next_text' => '»',
-          )); ?>
-       </div>
-
-     </article>
-
-     <aside class="side-area">
-       <div class="sinner">
-         <div class="sec-side">
-           <h2><a href="<?php echo esc_url(home_url('/')); ?>news/">クリニックだより一覧</a></h2>
-           <ul class="recent-list">
-
-             <?php query_posts('post_type=post&showposts=-1'); ?>
-             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                 <li>
-                   <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                     <time><?php the_time('Y年n月j日（D）'); ?></time>
-                     <h3><?php the_title(); ?></h3>
-                   </a>
-                 </li>
-             <?php endwhile;
-              endif; ?>
-             <?php query_posts($query_string); ?>
-
-           </ul>
-         </div>
-       </div>
-     </aside>
-   </div>
- <?php } else if (is_page('doctor')) { ?>
+ <?php if (is_page('doctor')) { ?>
 
    <!--<section id="recruit" class="recruit">
         <div class="wrap">
@@ -524,7 +452,7 @@
          <dl class="cassette">
            <dt class="cassette__tit">定期接種</dt>
            <dd class="cassette__txt">
-             <p>ヒブ／肺炎球菌／B型肝炎／ロタウイルス（1価・5価）／<br>四種混合／BCG／MR（麻しん風しん）／水痘／日本脳炎／<br>二種混合／子宮頸がん</p>
+             <p>B型肝炎／ロタウイルス（1価・5価）／肺炎球菌／<br>五種混合（四種混合＋ヒブ）／BCG／MR（麻しん風しん）／<br>水痘／日本脳炎／二種混合／子宮頸がん（HPV）</p>
            </dd>
            <dt class="cassette__tit">任意接種</dt>
            <dd class="cassette__txt">
@@ -545,12 +473,11 @@
        <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/medical05_img02.png" alt=""></p>
        <div class="att">
          <p>ワクチンの接種間隔については、異なる種類の注射生ワクチン同士は27日以上の接種間隔をあけます。<br>
-           同じ種類のワクチンについては個別に接種間隔の決まりがあります。詳しくはお問い合わせ下さい。<br>
-           新型コロナウイルスワクチンについては個別にお問合せください。<br>
-           ★1 2023年3月以前に4種混合ワクチンを接種された方は月齢3、4、5か月が接種時期となります。<br>
+           同じ種類のワクチンについては個別に接種間隔の決まりがあります。詳しくはお問い合わせください。<br>
+           ★1 2024年1月31日より前に生まれた方は自治体から4種混合とヒブの予診票が送られています。<br>　 5種混合の接種は専用の予診票が必要ですので自治体にお問合せください。<br>
            ★2 日本脳炎ワクチンは流行地域に滞在する場合は6か月からの接種を推奨します。<br>
            ★3 インフルエンザワクチンは毎年10月頃から冬期のみ接種します。6か月以上13歳未満は2週間〜1か月あけて2回、13歳以上は1回接種します。</p>
-         <p>2023年4月版</p>
+         <p>2024年4月版</p>
        </div>
      </div>
    </section>
