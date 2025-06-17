@@ -1,0 +1,359 @@
+#flow {
+  main {
+    padding: 60px 0 0;
+
+    .tit01 {
+      @include fontstyle(inherit, 32, bold, center, #00a7ea);
+    }
+
+    .tit02 {
+      @include fontstyle(inherit, 23, 100, left, #00a7ea);
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    .tit03 {
+      @include fontstyle(inherit, 21, 100, left, #ee7800);
+      margin-bottom: 10px;
+    }
+
+    section {}
+
+    .about {
+      padding-top: 70px;
+
+      .wrap {
+        @include wrap(0 auto, 696px);
+        position: relative;
+
+        @media screen and (max-width: 840px) {
+          width: auto;
+          padding: 0;
+        }
+
+        @media screen and (max-width: 479px) {
+          width: 100%;
+
+        }
+      }
+
+      &__txt {
+        @include fontstyle(inherit, 21, 100, left, #595757);
+        line-height: 1.5;
+        margin-bottom: 40px;
+      }
+
+      .reserve {
+        margin-bottom: 45px;
+        overflow: hidden;
+
+        &__tit {
+          width: 3em;
+          float: left;
+          @include fontstyle(inherit, 21, 400, left, #ee7800);
+          line-height: 1.9;
+        }
+
+        &__txt {
+          width: 14em;
+          float: left;
+          @include fontstyle(inherit, 21, 400, left, #ee7800);
+          line-height: 1.9;
+        }
+      }
+
+      &__thumb {
+        position: absolute;
+        right: -110px;
+        top: 190px;
+        width: 306px;
+
+        @media screen and (max-width: 840px) {
+          width: 40%;
+          right: 0;
+          top: 180px;
+        }
+
+      }
+
+      &__btn {
+        font-size: 17px;
+        width: 295px;
+        margin-bottom: 50px;
+
+        a {
+          @include fontstyle(inherit, 26, bold, center, #fff);
+          display: block;
+          padding: 4px 3%;
+          border-radius: 25px;
+          border: 1px solid #ee7800;
+          background: rgba(246, 179, 45, 1);
+          background: -moz-linear-gradient(top,
+              rgba(246, 179, 45, 1) 0%,
+              rgba(237, 107, 0, 1) 38%,
+              rgba(237, 107, 0, 1) 100%);
+          background: -webkit-gradient(left top,
+              left bottom,
+              color-stop(0%, rgba(246, 179, 45, 1)),
+              color-stop(38%, rgba(237, 107, 0, 1)),
+              color-stop(100%, rgba(237, 107, 0, 1)));
+          background: -webkit-linear-gradient(top,
+              rgba(246, 179, 45, 1) 0%,
+              rgba(237, 107, 0, 1) 38%,
+              rgba(237, 107, 0, 1) 100%);
+          background: -o-linear-gradient(top,
+              rgba(246, 179, 45, 1) 0%,
+              rgba(237, 107, 0, 1) 38%,
+              rgba(237, 107, 0, 1) 100%);
+          background: -ms-linear-gradient(top,
+              rgba(246, 179, 45, 1) 0%,
+              rgba(237, 107, 0, 1) 38%,
+              rgba(237, 107, 0, 1) 100%);
+          background: linear-gradient(to bottom,
+              rgba(246, 179, 45, 1) 0%,
+              rgba(237, 107, 0, 1) 38%,
+              rgba(237, 107, 0, 1) 100%);
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      &__tel {
+        @include fontstyle(inherit, 32, 400, left, #ee7800);
+        transform: scale(0.8, 1);
+        transform-origin: top left;
+        line-height: 1;
+      }
+    }
+
+    .procedure {
+      border-top: 1px dashed #00a7ea;
+      padding-top: 80px;
+      @include wrap(80px auto 0, 958px);
+
+      .wrap {
+        @include wrap(0 auto, 696px);
+      }
+
+      .box {
+        margin-bottom: 55px;
+
+        &__txt {
+          @include fontstyle(inherit, 20, 100, left, #595757);
+          line-height: 1.8;
+        }
+
+        &__btn {
+          margin-top: 70px;
+          width: 468px;
+
+          a {
+            display: block;
+
+            &:hover {
+              img {
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+          position: relative;
+
+          .box__txt {
+            width: 514px;
+          }
+
+          .box__thumb {
+            position: absolute;
+            right: -130px;
+            top: 50px;
+            width: 303px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 840px) {
+    main {}
+  }
+
+  @media only screen and (max-width: 479px) {
+    main {
+      padding: 30px 0 0;
+
+      .tit01 {
+        @include fontstyle(inherit, 22, bold, center, #00a7ea);
+      }
+
+      .tit02 {
+        @include fontstyle(inherit, 14, 100, center, #00a7ea);
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      .tit03 {
+        @include fontstyle(inherit, 12, 100, left, #ee7800);
+        margin-bottom: 5px;
+      }
+
+      section {}
+
+      .about {
+        padding-top: 15px;
+
+        .wrap {
+          @include wrap(0 auto, 100%);
+          position: relative;
+          padding: 0;
+          overflow: inherit;
+        }
+
+        &__txt {
+          @include fontstyle(inherit, 12, 100, left, #595757);
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+
+        .reserve {
+          margin-bottom: 0;
+          overflow: hidden;
+
+          &__tit {
+            width: 3em;
+            float: left;
+            @include fontstyle(inherit, 12, 400, left, #ee7800);
+            line-height: 1.9;
+          }
+
+          &__txt {
+            width: 12em;
+            float: left;
+            @include fontstyle(inherit, 12, 400, left, #ee7800);
+            line-height: 1.9;
+          }
+        }
+
+        &__thumb {
+          position: absolute;
+          right: -5%;
+          top: 130px;
+          width: 38%;
+        }
+
+        &__btn {
+          @include wrap(0 auto, 85%);
+
+          margin-bottom: 30px;
+
+          a {
+            @include fontstyle(inherit, 20, bold, center, #fff);
+            display: block;
+            padding: 8px 3%;
+            border-radius: 25px;
+            border: 1px solid #ee7800;
+            background: rgba(246, 179, 45, 1);
+            background: -moz-linear-gradient(top,
+                rgba(246, 179, 45, 1) 0%,
+                rgba(237, 107, 0, 1) 38%,
+                rgba(237, 107, 0, 1) 100%);
+            background: -webkit-gradient(left top,
+                left bottom,
+                color-stop(0%, rgba(246, 179, 45, 1)),
+                color-stop(38%, rgba(237, 107, 0, 1)),
+                color-stop(100%, rgba(237, 107, 0, 1)));
+            background: -webkit-linear-gradient(top,
+                rgba(246, 179, 45, 1) 0%,
+                rgba(237, 107, 0, 1) 38%,
+                rgba(237, 107, 0, 1) 100%);
+            background: -o-linear-gradient(top,
+                rgba(246, 179, 45, 1) 0%,
+                rgba(237, 107, 0, 1) 38%,
+                rgba(237, 107, 0, 1) 100%);
+            background: -ms-linear-gradient(top,
+                rgba(246, 179, 45, 1) 0%,
+                rgba(237, 107, 0, 1) 38%,
+                rgba(237, 107, 0, 1) 100%);
+            background: linear-gradient(to bottom,
+                rgba(246, 179, 45, 1) 0%,
+                rgba(237, 107, 0, 1) 38%,
+                rgba(237, 107, 0, 1) 100%);
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+
+        &__tel {
+          width: 100%;
+          @include fontstyle(inherit, 30, 400, center, #ee7800);
+          transform: scale(0.8, 1);
+          transform-origin: top center;
+          line-height: 1;
+        }
+      }
+
+      .procedure {
+        border-top: 1px solid #00a7ea;
+        padding-top: 40px;
+        @include wrap(40px auto 0, 100%);
+
+        .wrap {
+          @include wrap(0 auto, 100%);
+          padding: 0;
+        }
+
+        .box {
+          margin-bottom: 30px;
+
+          &__txt {
+            @include fontstyle(inherit, 14, 100, left, #595757);
+            line-height: 1.8;
+          }
+
+          &__btn {
+            margin-top: 15px;
+            width: 100%;
+
+            a {
+              display: block;
+
+              &:hover {
+                img {
+                  opacity: 0.7;
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+            position: inherit;
+
+            .box__txt {
+              width: 100%;
+            }
+
+            .box__thumb {
+              position: inherit;
+              right: inherit;
+              top: inherit;
+              width: 80%;
+              @include wrap(0 auto, 80%);
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

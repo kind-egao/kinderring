@@ -1,0 +1,5741 @@
+@charset "UTF-8";
+/* ----------------------------------
+
+共通クラス
+
+------------------------------------- */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #595757;
+}
+
+ol,
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+em {
+  font-style: normal;
+}
+
+.pcArea {
+  display: block !important;
+}
+
+.spArea {
+  display: none !important;
+}
+
+.cf:after,
+.cf:before {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+.wrap header {
+  width: 960px;
+  margin: 0 auto 25px;
+  padding-top: 25px;
+}
+.wrap header .hl {
+  width: 480px;
+  float: left;
+}
+.wrap header .hl h1 {
+  margin: 0;
+}
+.wrap header .hl h1 img {
+  display: block;
+}
+.wrap header .hl p.category {
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #595757;
+  margin-top: 0;
+}
+.wrap header .hr {
+  float: right;
+  width: 480px;
+  margin-top: 8px;
+}
+.wrap header .hr .hrl {
+  float: left;
+  font-size: 12px;
+  line-height: 24px;
+  padding-left: 18px;
+  width: 54%;
+}
+.wrap header .hr .hrl p.add {
+  letter-spacing: 1px;
+}
+.wrap header .hr .hrl p.tel a {
+  color: #ee7800;
+  font-size: 19px;
+  font-size: 1.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.wrap header .hr .hrr {
+  float: right;
+  width: 39%;
+}
+.wrap header .hr .hrr p.afternoon {
+  font-size: 17px;
+  font-weight: bolder;
+  color: #00a7ea;
+  margin-bottom: 10px;
+}
+.wrap header .hr .hrr p.afternoon::before {
+  content: "＼";
+  padding-right: 8px;
+}
+.wrap header .hr .hrr p.afternoon::after {
+  content: "／";
+  padding-left: 8px;
+}
+.wrap header .hr .hrr p.reservetxt {
+  text-align: center;
+  font-weight: bold;
+  color: #ee7800;
+}
+.wrap header .hr .hrr p.reservebtn {
+  font-size: 17px;
+}
+.wrap header .hr .hrr p.reservebtn a {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 3%;
+  border-radius: 25px;
+  border: 1px solid #ee7800;
+  background: #f6b32d;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f6b32d), color-stop(38%, #ed6b00), color-stop(100%, #ed6b00));
+  background: -webkit-linear-gradient(top, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6b32d), color-stop(38%, #ed6b00), to(#ed6b00));
+  background: linear-gradient(to bottom, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+}
+.wrap header .hr .hrr p.reservebtn a:hover {
+  opacity: 0.7;
+}
+.wrap header nav {
+  clear: both;
+}
+.wrap header nav .gnav {
+  padding: 20px 0;
+}
+.wrap header nav .gnav__list {
+  float: left;
+  position: relative;
+}
+.wrap header nav .gnav__list a {
+  margin: 0 0 0 45px;
+  padding: 10px 0;
+  color: #00a7ea;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+}
+.wrap header nav .gnav__list a:hover {
+  color: #ee7800;
+}
+.wrap header nav .gnav__list span {
+  margin: 0 0 0 45px;
+  color: #00a7ea;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  opacity: 0.5;
+  padding: 10px 0;
+}
+.wrap header nav .gnav__list--second {
+  position: absolute;
+  top: 40px;
+  left: 25px;
+  width: 100%;
+  background: #ffffff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+  display: none;
+  border-left: 1px solid #00abf4;
+  z-index: 1;
+}
+.wrap header nav .gnav__list--second li {
+  border-right: 1px solid #00abf4;
+  border-bottom: 1px solid #00abf4;
+}
+.wrap header nav .gnav__list--second li a {
+  color: #00a7ea;
+  margin: 0;
+  padding: 10px 10%;
+  width: 80%;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.wrap header nav .gnav__list:hover .gnav__list--second {
+  top: 44px;
+  left: 25px;
+  margin: 0 auto;
+  display: block;
+  opacity: 1;
+  z-index: 1;
+}
+.wrap header.fixed {
+  width: 100%;
+}
+.wrap header.fixed nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  background: #fff;
+  height: 64px;
+}
+.wrap header.fixed nav .gnav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 960px;
+  background: #fff;
+}
+.wrap .inner {
+  clear: both;
+  width: 690px;
+  margin: 0 auto;
+}
+.wrap .tit01 {
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  color: #00a7ea;
+  font-weight: bold;
+  line-height: 1;
+}
+.wrap footer {
+  margin: 125px 0 0;
+  text-align: center;
+  padding: 10px 0;
+  background: #00a7ea;
+}
+.wrap footer small {
+  color: #fff;
+  font-size: 10px;
+  font-size: 1rem;
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+}
+
+@media only screen and (max-width: 840px) {
+  body {
+    background: #00a7ea;
+  }
+
+  .wrap {
+    background: #fff;
+    margin: 0 auto;
+    width: 80%;
+    padding: 0 6%;
+  }
+  .wrap header {
+    width: 100%;
+    padding-top: 15px;
+    margin: 0 0 45px;
+    overflow: hidden;
+  }
+  .wrap header .hl {
+    width: 50%;
+  }
+  .wrap header .hl h1 {
+    margin: 0;
+    width: 100%;
+  }
+  .wrap header .hl p.category {
+    display: none;
+  }
+  .wrap header .hr {
+    width: 100%;
+    margin-top: 0;
+  }
+  .wrap header .hr .hrl {
+    float: left;
+    font-size: 12px;
+    padding-left: 0;
+    width: 90%;
+  }
+  .wrap header .hr .hrl p.name {
+    display: none;
+  }
+  .wrap header .hr .hrl p.add {
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+  .wrap header .hr .hrl p.tel {
+    float: left;
+    width: 58%;
+  }
+  .wrap header .hr .hrl p.tel a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 1%;
+    border-radius: 15px;
+    line-height: 1;
+    font-size: 11px;
+    font-size: 1.1rem;
+    border: 1px solid #ee7800;
+    background: #f6b32d;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #f6b32d), color-stop(38%, #ed6b00), color-stop(100%, #ed6b00));
+    background: -webkit-linear-gradient(top, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6b32d), color-stop(38%, #ed6b00), to(#ed6b00));
+    background: linear-gradient(to bottom, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+  }
+  .wrap header .hr .hrl p.tel a:hover {
+    opacity: 0.7;
+  }
+  .wrap header .hr .hrl p.fax {
+    float: left;
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 2px 0 0 16px;
+  }
+  .wrap header .hr .hrr {
+    width: 100%;
+    float: inherit;
+    display: none;
+  }
+  .wrap header nav {
+    display: none;
+  }
+  .wrap header nav ul {
+    margin: 20px 0 0;
+  }
+  .wrap header nav ul li {
+    float: left;
+  }
+  .wrap header nav ul li a {
+    margin: 0 0 0 45px;
+    color: #00a7ea;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+  }
+  .wrap header nav ul li a:hover {
+    color: #ee7800;
+  }
+  .wrap header nav ul li span {
+    margin: 0 0 0 45px;
+    color: #00a7ea;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    opacity: 0.5;
+  }
+  .wrap .inner {
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrap footer {
+    margin: 30px 0 0;
+    text-align: center;
+    padding: 10px 0;
+    background: #fff;
+  }
+  .wrap footer small {
+    color: #595858;
+    font-size: 10px;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .pcArea {
+    display: none !important;
+  }
+
+  .spArea {
+    display: block !important;
+  }
+
+  .wrap {
+    background: #fff;
+    margin: 0 auto;
+    width: 80%;
+    padding: 0 6%;
+    overflow: hidden;
+  }
+  .wrap header {
+    width: 100%;
+    padding-top: 15px;
+    margin: 0 0 15px;
+    overflow: hidden;
+  }
+  .wrap header .hl {
+    width: 100%;
+    float: inherit;
+  }
+  .wrap header .hl h1 {
+    margin: 0;
+    width: 80%;
+  }
+  .wrap header .hl p.category {
+    display: none;
+  }
+  .wrap header .hr {
+    width: 100%;
+    float: inherit;
+    margin-top: 0;
+  }
+  .wrap header .hr .hrl {
+    float: left;
+    font-size: 11px;
+    font-size: 1.1rem;
+    padding-left: 0;
+    width: 92%;
+  }
+  .wrap header .hr .hrl p.name {
+    display: none;
+  }
+  .wrap header .hr .hrl p.add {
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+  .wrap header .hr .hrl p.tel {
+    float: left;
+    width: 58%;
+    letter-spacing: 1px;
+  }
+  .wrap header .hr .hrl p.tel a {
+    display: block;
+    width: 95%;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 1%;
+    border-radius: 15px;
+    line-height: 1;
+    font-size: 11px;
+    font-size: 1.1rem;
+    border: 1px solid #ee7800;
+    background: #f6b32d;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #f6b32d), color-stop(38%, #ed6b00), color-stop(100%, #ed6b00));
+    background: -webkit-linear-gradient(top, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6b32d), color-stop(38%, #ed6b00), to(#ed6b00));
+    background: linear-gradient(to bottom, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+  }
+  .wrap header .hr .hrl p.tel a:hover {
+    opacity: 0.7;
+  }
+  .wrap header .hr .hrl p.fax {
+    float: left;
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 2px 0 0;
+  }
+  .wrap header .hr .hrr {
+    width: 100%;
+    float: inherit;
+    display: none;
+  }
+  .wrap header nav {
+    display: none;
+  }
+  .wrap header nav ul {
+    margin: 20px 0 0;
+  }
+  .wrap header nav ul li {
+    float: left;
+  }
+  .wrap header nav ul li a {
+    margin: 0 0 0 45px;
+    color: #00a7ea;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+  }
+  .wrap header nav ul li a:hover {
+    color: #ee7800;
+  }
+  .wrap header nav ul li span {
+    margin: 0 0 0 45px;
+    color: #00a7ea;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    opacity: 0.5;
+  }
+  .wrap .inner {
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrap footer {
+    margin: 30px 0 0;
+    text-align: center;
+    padding: 10px 0;
+    background: #fff;
+  }
+  .wrap footer small {
+    color: #595858;
+    font-size: 10px;
+    font-size: 1rem;
+  }
+}
+/* ----------------------------------
+
+TOP
+
+------------------------------------- */
+#top .slider {
+  margin: 0 0 25px;
+  background: #0095E5;
+}
+#top .slider .inner {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+#top .slider .inner .arrows .slick-arrow {
+  z-index: 10;
+}
+#top .slider .inner .arrows .slick-arrow:hover img {
+  opacity: 0.3;
+}
+#top .slider .inner .arrows .slick-next,
+#top .slider .inner .arrows .slick-prev {
+  width: 48px;
+  height: 48px;
+  top: 54%;
+}
+#top .slider .inner .arrows .slick-next {
+  right: -8%;
+}
+#top .slider .inner .arrows .slick-prev {
+  left: -8%;
+}
+#top .slider .inner .arrows .slick-disabled {
+  background: #0095E5;
+  cursor: default;
+}
+#top .slider .inner .arrows .slick-next:before,
+#top .slider .inner .arrows .slick-prev:before {
+  content: "";
+}
+#top .news {
+  margin: 0 0 55px;
+}
+#top .news .inner {
+  border: 3px solid #00a7ea;
+  padding: 25px 1.5%;
+  border-radius: 10px;
+  /* width: 640px; */
+}
+#top .news .inner h1 {
+  display: table;
+  width: 100%;
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  margin-bottom: 25px;
+}
+#top .news .inner h1 span {
+  display: table-cell;
+  text-align: center;
+  font-size: 32px;
+  font-size: 3.2rem;
+  color: #00a7ea;
+  font-weight: bold;
+  line-height: 1;
+}
+#top .news .inner h1 span img {
+  margin-right: 2%;
+  vertical-align: middle;
+  width: 6%;
+}
+#top .news .inner .list li {
+  position: relative;
+  margin: 18px 0 0;
+  padding: 0 0 0 7em;
+}
+#top .news .inner .list li:first-child {
+  margin: 0;
+}
+#top .news .inner .list li .icon {
+  font-size: 17px;
+  font-size: 1.7rem;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  text-align: center;
+  background: #ee7800;
+  padding: 2px 1.5%;
+  position: absolute;
+  left: 0;
+  line-height: 1.2;
+}
+#top .news .inner .list li a {
+  font-size: 17px;
+  font-size: 1.7rem;
+  color: #595757;
+  width: 100%;
+  display: block;
+}
+#top .news .inner .list li a:hover {
+  color: #ee7800;
+  text-decoration: underline;
+}
+#top .news .inner .tolist {
+  text-align: right;
+}
+#top .news .inner .tolist a {
+  font-size: 19px;
+  font-size: 1.9rem;
+  color: #00a7ea;
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+#top .news .inner .tolist a:hover {
+  color: #ee7800;
+}
+#top .news .staff {
+  clear: both;
+  width: 726px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 840px) {
+  #top .news .staff {
+    width: 100%;
+  }
+  .staff-fixed-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 841px) {
+  #top .news .staff {
+    display: none;
+  }
+}
+#top .news .staff a {
+  display: block;
+  background-color: #04a6ea;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  border: 2px solid #04a6ea;
+  font-size: 18px;
+  margin-top: 30px;
+}
+#top .news .staff a:hover {
+  opacity: 0.7;
+}
+@media only screen and (min-width: 841px) {
+  .staff-fixed-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+  }
+  .staff-fixed-btn a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    background-color: #04a6ea;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.3;
+    text-decoration: none;
+    border: 2px solid #04a6ea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.35s ease;
+    text-align: center;
+  }
+  .staff-fixed-btn a:hover {
+    opacity: 0.7;
+  }
+}
+#top .reserveBtnSp {
+  display: none;
+}
+#top .content {
+  margin: 0 0 55px;
+}
+#top .content .inner h1 {
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  font-size: 3.2rem;
+  color: #00a7ea;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 90px;
+}
+#top .content .inner .department li {
+  float: left;
+  margin: 65px 9.5% 0 0;
+  width: 27%;
+}
+#top .content .inner .department li:first-child, #top .content .inner .department li:nth-child(2), #top .content .inner .department li:nth-child(3) {
+  margin-top: 0;
+}
+#top .content .inner .department li:nth-child(3n) {
+  margin-right: 0;
+}
+#top .content .inner .department li p {
+  position: relative;
+  display: block;
+  width: 186px;
+  height: 186px;
+}
+#top .content .inner .department li p .btn {
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+}
+#top .content .inner .department li p .head,
+#top .content .inner .department li p .tail {
+  display: none;
+}
+#top .content .inner .department li p .head img,
+#top .content .inner .department li p .tail img {
+  width: 60%;
+}
+#top .content .inner .department li p:hover .head {
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 30%;
+}
+#top .content .inner .department li p:hover .tail {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: -70px;
+}
+#top .content .inner .btn2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+  padding-top: 100px;
+  margin-bottom: 0;
+  width: 100%;
+}
+#top .content .inner .btn2__item {
+  width: calc(100% / 3 - 2%);
+}
+#top .content .inner .btn2__item a {
+  display: block;
+  background-color: #04a6ea;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  border: 2px solid #04a6ea;
+  font-size: 14px;
+}
+#top .content .inner .btn2__item a:hover {
+  opacity: 0.7;
+}
+#top .businesshours {
+  background: #f6f7fa;
+  margin: 0 0 55px;
+}
+#top .businesshours .inner {
+  padding: 50px 0;
+}
+#top .businesshours .inner h1 {
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  font-size: 3.2rem;
+  color: #00a7ea;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#top .businesshours .inner .op_img {
+  margin: 0 0 30px;
+}
+#top .businesshours .inner .op_img img {
+  display: block;
+}
+#top .businesshours .inner .op_att {
+  margin: 0 0 0 60px;
+}
+#top .businesshours .inner .op_att li {
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 2;
+  text-indent: -1em;
+  margin: 0 0 0 1em;
+}
+#top .about {
+  margin: 0 0 125px;
+}
+#top .about .inner h1 {
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  font-size: 3.2rem;
+  color: #00a7ea;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+#top .about .inner .ab_read {
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 2;
+  letter-spacing: 1px;
+  margin: 0 0 15px;
+  font-family: "ヒラギノ明朝 Std", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+#top .about .inner .ab_txt {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2;
+  letter-spacing: 1px;
+  margin: 0 0 45px;
+}
+#top .access {
+  margin: 0;
+}
+#top .access .inner {
+  width: 680px;
+}
+#top .access .inner h1 {
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  font-size: 3.2rem;
+  color: #00a7ea;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+#top .access .inner .ac_map {
+  margin-bottom: 20px;
+}
+#top .access .inner .acwrap {
+  overflow: hidden;
+}
+#top .access .inner .acwrap .acwrapL {
+  float: left;
+}
+#top .access .inner .acwrap .acwrapL .ac_add {
+  color: #595757;
+  font-size: 23px;
+  font-size: 2.3rem;
+  letter-spacing: 2px;
+}
+#top .access .inner .acwrap .acwrapL .ac_tel {
+  margin: 10px 0 0;
+  color: #ee7800;
+  letter-spacing: 4px;
+  display: table;
+  line-height: 1;
+  font-weight: bold;
+}
+#top .access .inner .acwrap .acwrapL .ac_tel span {
+  display: table-cell;
+  vertical-align: bottom;
+  font-size: 21px;
+  font-size: 2.1rem;
+  padding: 0 10px 0 0;
+}
+#top .access .inner .acwrap .acwrapL .ac_tel a {
+  color: #ee7800;
+  display: table-cell;
+  vertical-align: bottom;
+  font-size: 31px;
+  font-size: 3.1rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+#top .access .inner .acwrap .acwrapR {
+  float: right;
+}
+#top .access .inner .acwrap .acwrapR .ac_parking {
+  color: #595757;
+  font-size: 20px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: table;
+  width: 100%;
+}
+#top .access .inner .acwrap .acwrapR .ac_parking span {
+  display: table-cell;
+  color: #ee7800;
+  line-height: 1;
+  font-family: "Noto Sans Japanese", "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+}
+#top .access .inner .acwrap .acwrapR .ac_parking span img {
+  padding-right: 2%;
+  width: 7.5%;
+}
+#top .access .inner .acwrap .acwrapR .ac_gmap {
+  margin: 15px 0 0;
+}
+#top .access .inner .acwrap .acwrapR .ac_gmap a {
+  font-size: 16px;
+  font-size: 1.6rem;
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 3%;
+  border-radius: 10px;
+  background: #00a7ea;
+  float: right;
+}
+#top .access .inner .acwrap .acwrapR .ac_gmap a:hover {
+  opacity: 0.7;
+}
+#top .access .inner .ac_access {
+  margin: 30px 0 0;
+  clear: both;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  color: #00a7ea;
+}
+@media only screen and (max-width: 840px) {
+  #top .pcArea {
+    display: none !important;
+  }
+  #top .spArea {
+    display: block !important;
+  }
+  #top .slider {
+    margin: 0 0 25px;
+    height: inherit;
+    background: #fff;
+  }
+  #top .slider .inner {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  #top .slider .inner .arrows {
+    display: none;
+  }
+  #top .slider .inner .arrows .slick-arrow {
+    z-index: 10;
+  }
+  #top .slider .inner .arrows .slick-arrow:hover img {
+    opacity: 0.3;
+  }
+  #top .slider .inner .arrows .slick-next,
+#top .slider .inner .arrows .slick-prev {
+    width: 48px;
+    height: 48px;
+    top: 54%;
+  }
+  #top .slider .inner .arrows .slick-next {
+    right: -8%;
+  }
+  #top .slider .inner .arrows .slick-prev {
+    left: -8%;
+  }
+  #top .slider .inner .arrows .slick-disabled {
+    background: #0095E5;
+    cursor: default;
+  }
+  #top .slider .inner .arrows .slick-next:before,
+#top .slider .inner .arrows .slick-prev:before {
+    content: "";
+  }
+  #top .news {
+    margin: 0 0 25px;
+  }
+  #top .news .inner {
+    border: 3px solid #00a7ea;
+    padding: 15px 2.5% 10px 5%;
+    border-radius: 10px;
+    width: 92.5%;
+  }
+  #top .news .inner h1 {
+    display: table;
+    width: 100%;
+  }
+  #top .news .inner h1 span {
+    display: table-cell;
+    text-align: center;
+    font-size: 20px;
+    font-size: 2rem;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+  }
+  #top .news .inner h1 span img {
+    margin-right: 2%;
+    vertical-align: middle;
+    width: 6%;
+  }
+  #top .news .inner .list li {
+    position: relative;
+    margin: 5px 0 0;
+    padding: 0 0 0 5.5em;
+  }
+  #top .news .inner .list li:first-child {
+    margin: 0;
+  }
+  #top .news .inner .list li .icon {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    background: #ee7800;
+    padding: 2px 1.5%;
+    position: absolute;
+    left: 0;
+    line-height: 1;
+  }
+  #top .news .inner .list li a {
+    color: #595757;
+  }
+  #top .news .inner .list li a:hover {
+    color: #ee7800;
+    text-decoration: underline;
+  }
+  #top .news .inner .tolist {
+    text-align: right;
+  }
+  #top .news .inner .tolist a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    color: #00a7ea;
+    letter-spacing: 10px;
+    font-weight: bold;
+  }
+  #top .news .inner .tolist a:hover {
+    color: #ee7800;
+  }
+  #top .reserveBtnSp {
+    display: block;
+    margin-bottom: 55px;
+  }
+  #top .reserveBtnSp a {
+    display: block;
+  }
+  #top .reserveBtnSp a:hover {
+    opacity: 0.7;
+  }
+  #top .content {
+    margin: 0 0 60px;
+  }
+  #top .content .inner h1 {
+    text-align: center;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 60px;
+  }
+  #top .content .inner .department li {
+    float: left;
+    margin: 60px 6% 0 0;
+    width: 29.3%;
+  }
+  #top .content .inner .department li:first-child, #top .content .inner .department li:nth-child(2), #top .content .inner .department li:nth-child(3) {
+    margin-top: 0;
+  }
+  #top .content .inner .department li:nth-child(3n) {
+    margin-right: 0;
+  }
+  #top .content .inner .department li p {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #top .content .inner .department li p a {
+    position: inherit;
+  }
+  #top .content .inner .department li p .btn {
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: inherit;
+  }
+  #top .content .inner .department li p .head,
+#top .content .inner .department li p .tail {
+    display: none;
+  }
+  #top .content .inner .department li p .head img,
+#top .content .inner .department li p .tail img {
+    width: 60%;
+  }
+  #top .content .inner .department li p:hover .head {
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 30%;
+  }
+  #top .content .inner .department li p:hover .tail {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: -70px;
+  }
+  #top .businesshours {
+    background: #fff;
+    margin: 0 0 60px;
+  }
+  #top .businesshours .inner {
+    padding: 0;
+  }
+  #top .businesshours .inner h1 {
+    text-align: center;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  #top .businesshours .inner .op_img {
+    margin: 0 0 10px;
+  }
+  #top .businesshours .inner .op_img img {
+    display: block;
+  }
+  #top .businesshours .inner .op_att {
+    margin: 0;
+  }
+  #top .businesshours .inner .op_att li {
+    line-height: 2;
+    text-indent: -1em;
+    margin: 0 0 0 1em;
+  }
+  #top .about {
+    margin: 0 0 60px;
+  }
+  #top .about .inner h1 {
+    text-align: center;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  #top .about .inner .ab_read {
+    line-height: 2;
+    letter-spacing: 1px;
+    margin: 0 0 15px;
+    font-family: "ヒラギノ明朝 Std", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  }
+  #top .about .inner .ab_txt {
+    line-height: 1.8;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+  }
+  #top .access {
+    margin: 0;
+  }
+  #top .access .inner {
+    width: 100%;
+  }
+  #top .access .inner h1 {
+    text-align: center;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  #top .access .inner .ac_map {
+    margin-bottom: 10px;
+  }
+  #top .access .inner .ac_map img {
+    display: block;
+  }
+  #top .access .inner .acwrap {
+    overflow: hidden;
+  }
+  #top .access .inner .acwrap .acwrapL {
+    float: inherit;
+    text-align: center;
+  }
+  #top .access .inner .acwrap .acwrapL .ac_add {
+    color: #595757;
+    letter-spacing: 2px;
+  }
+  #top .access .inner .acwrap .acwrapL .ac_tel {
+    margin: 10px auto;
+    color: #ee7800;
+    letter-spacing: 4px;
+    display: table;
+    line-height: 1;
+    font-weight: bold;
+    width: 47%;
+  }
+  #top .access .inner .acwrap .acwrapL .ac_tel span {
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: right;
+    padding: 0 5px 0 0;
+  }
+  #top .access .inner .acwrap .acwrapL .ac_tel a {
+    color: #ee7800;
+    display: table-cell;
+    vertical-align: bottom;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: right;
+  }
+  #top .access .inner .acwrap .acwrapR {
+    float: inherit;
+    text-align: center;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_parking {
+    color: #595757;
+    font-size: 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: table;
+    width: 100%;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_parking span {
+    display: table-cell;
+    color: #ee7800;
+    line-height: 1;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_parking span img {
+    padding-right: 1%;
+    width: 4%;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_gmap {
+    margin: 25px auto 0;
+    width: 90%;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_gmap a {
+    font-size: 16px;
+    font-size: 1.6rem;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 3%;
+    border-radius: 10px;
+    background: #00a7ea;
+    float: inherit;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_gmap a:hover {
+    opacity: 0.7;
+  }
+  #top .access .inner .ac_access {
+    margin: 25px 0 0;
+    clear: both;
+    font-weight: bold;
+    line-height: 1.8;
+    letter-spacing: 0;
+    color: #00a7ea;
+    border-top: 1px solid #00a7ea;
+    padding-top: 25px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #top .pcArea {
+    display: none !important;
+  }
+  #top .spArea {
+    display: block !important;
+  }
+  #top .slider {
+    margin: 0 0 25px;
+    height: inherit;
+  }
+  #top .slider .inner {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  #top .slider .inner .arrows {
+    display: none;
+  }
+  #top .slider .inner .arrows .slick-arrow {
+    z-index: 10;
+  }
+  #top .slider .inner .arrows .slick-arrow:hover img {
+    opacity: 0.3;
+  }
+  #top .slider .inner .arrows .slick-next,
+#top .slider .inner .arrows .slick-prev {
+    width: 48px;
+    height: 48px;
+    top: 54%;
+  }
+  #top .slider .inner .arrows .slick-next {
+    right: -8%;
+  }
+  #top .slider .inner .arrows .slick-prev {
+    left: -8%;
+  }
+  #top .slider .inner .arrows .slick-disabled {
+    background: #0095E5;
+    cursor: default;
+  }
+  #top .slider .inner .arrows .slick-next:before,
+#top .slider .inner .arrows .slick-prev:before {
+    content: "";
+  }
+  #top .news {
+    margin: 0 0 25px;
+  }
+  #top .news .inner {
+    border: 3px solid #00a7ea;
+    padding: 15px 2.5% 10px 5%;
+    border-radius: 10px;
+    width: 92.5%;
+  }
+  #top .news .inner h1 {
+    display: table;
+    width: 100%;
+  }
+  #top .news .inner h1 span {
+    display: table-cell;
+    text-align: center;
+    font-size: 20px;
+    font-size: 2rem;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+  }
+  #top .news .inner h1 span img {
+    margin-right: 2%;
+    vertical-align: middle;
+    width: 6%;
+  }
+  #top .news .inner .list li {
+    position: relative;
+    margin: 5px 0 0;
+    padding: 0 0 0 3.5em;
+  }
+  #top .news .inner .list li:first-child {
+    margin: 0;
+  }
+  #top .news .inner .list li .icon {
+    font-size: 10px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    background: #ee7800;
+    padding: 2px 1.5%;
+    position: absolute;
+    left: 0;
+    line-height: 1;
+  }
+  #top .news .inner .list li a {
+    font-size: 10px;
+    font-size: 1rem;
+    color: #595757;
+  }
+  #top .news .inner .list li a:hover {
+    color: #ee7800;
+    text-decoration: underline;
+  }
+  #top .news .inner .tolist {
+    text-align: right;
+  }
+  #top .news .inner .tolist a {
+    font-size: 12px;
+    font-size: 1.2rem;
+    color: #00a7ea;
+    letter-spacing: 10px;
+    font-weight: bold;
+  }
+  #top .news .inner .tolist a:hover {
+    color: #ee7800;
+  }
+  #top .reserveBtnSp {
+    display: block;
+    margin-bottom: 25px;
+  }
+  #top .reserveBtnSp a {
+    display: block;
+  }
+  #top .reserveBtnSp a:hover {
+    opacity: 0.7;
+  }
+  #top .content {
+    margin: 0 0 60px;
+  }
+  #top .content .inner h1 {
+    text-align: center;
+    font-size: 22px;
+    font-size: 2.2rem;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 50px;
+  }
+  #top .content .inner .department li {
+    float: left;
+    margin: 30px 6% 0 0;
+    width: 29.3%;
+  }
+  #top .content .inner .department li:first-child, #top .content .inner .department li:nth-child(2), #top .content .inner .department li:nth-child(3) {
+    margin-top: 0;
+  }
+  #top .content .inner .department li:nth-child(3n) {
+    margin-right: 0;
+  }
+  #top .content .inner .department li p {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #top .content .inner .department li p a {
+    position: inherit;
+  }
+  #top .content .inner .department li p .btn {
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: inherit;
+  }
+  #top .content .inner .department li p .head {
+    display: none;
+  }
+  #top .content .inner .department li p .tail {
+    display: none;
+  }
+  #top .content .inner .department li p .tail img {
+    width: 30%;
+  }
+  #top .content .inner .department li p:hover .head {
+    display: none;
+  }
+  #top .content .inner .department li p:hover .tail {
+    display: none;
+  }
+  @-webkit-keyframes dephed01 {
+    0% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    40% {
+      -webkit-transform: translateY(-25px);
+              transform: translateY(-25px);
+    }
+    90% {
+      -webkit-transform: translateY(-25px);
+              transform: translateY(-25px);
+    }
+    100% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+  }
+  @keyframes dephed01 {
+    0% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    40% {
+      -webkit-transform: translateY(-25px);
+              transform: translateY(-25px);
+    }
+    90% {
+      -webkit-transform: translateY(-25px);
+              transform: translateY(-25px);
+    }
+    100% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+  }
+  @-webkit-keyframes deptai01 {
+    0% {
+      -webkit-transform: translate(50%, 0%) rotate(0);
+              transform: translate(50%, 0%) rotate(0);
+    }
+    50% {
+      -webkit-transform: translate(90%, 0%) rotate(0);
+              transform: translate(90%, 0%) rotate(0);
+    }
+    60% {
+      -webkit-transform: translate(90%, 0%) rotate(-50deg);
+              transform: translate(90%, 0%) rotate(-50deg);
+    }
+    70% {
+      -webkit-transform: translate(90%, 0%) rotate(0);
+              transform: translate(90%, 0%) rotate(0);
+    }
+    80% {
+      -webkit-transform: translate(90%, 0%) rotate(-50deg);
+              transform: translate(90%, 0%) rotate(-50deg);
+    }
+    90% {
+      -webkit-transform: translate(90%, 0%) rotate(0);
+              transform: translate(90%, 0%) rotate(0);
+    }
+    100% {
+      -webkit-transform: translate(50%, 0%) rotate(0);
+              transform: translate(50%, 0%) rotate(0);
+    }
+  }
+  @keyframes deptai01 {
+    0% {
+      -webkit-transform: translate(50%, 0%) rotate(0);
+              transform: translate(50%, 0%) rotate(0);
+    }
+    50% {
+      -webkit-transform: translate(90%, 0%) rotate(0);
+              transform: translate(90%, 0%) rotate(0);
+    }
+    60% {
+      -webkit-transform: translate(90%, 0%) rotate(-50deg);
+              transform: translate(90%, 0%) rotate(-50deg);
+    }
+    70% {
+      -webkit-transform: translate(90%, 0%) rotate(0);
+              transform: translate(90%, 0%) rotate(0);
+    }
+    80% {
+      -webkit-transform: translate(90%, 0%) rotate(-50deg);
+              transform: translate(90%, 0%) rotate(-50deg);
+    }
+    90% {
+      -webkit-transform: translate(90%, 0%) rotate(0);
+              transform: translate(90%, 0%) rotate(0);
+    }
+    100% {
+      -webkit-transform: translate(50%, 0%) rotate(0);
+              transform: translate(50%, 0%) rotate(0);
+    }
+  }
+  #top .content .inner .department .active p .head {
+    display: block;
+    position: absolute;
+    -webkit-animation-name: dephed01;
+            animation-name: dephed01;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    top: 0;
+    left: 30%;
+  }
+  #top .content .inner .department .active p .head img {
+    width: 60%;
+  }
+  #top .content .inner .department .active p .tail {
+    display: block;
+    position: absolute;
+    -webkit-animation-name: deptai01;
+            animation-name: deptai01;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-transform-origin: left top 0;
+            transform-origin: left top 0;
+    bottom: 10px;
+    right: 0;
+  }
+  #top .content .inner .department .active p .tail img {
+    width: 30%;
+  }
+  #top .content .inner .btn2 {
+    width: 100%;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  #top .content .inner .btn2__item {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #top .businesshours {
+    background: #fff;
+    margin: 0 0 60px;
+  }
+  #top .businesshours .inner {
+    padding: 0;
+  }
+  #top .businesshours .inner h1 {
+    text-align: center;
+    font-size: 22px;
+    font-size: 2.2rem;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  #top .businesshours .inner .op_img {
+    margin: 0 0 10px;
+  }
+  #top .businesshours .inner .op_img img {
+    display: block;
+  }
+  #top .businesshours .inner .op_att {
+    margin: 0;
+  }
+  #top .businesshours .inner .op_att li {
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 2;
+    text-indent: -1em;
+    margin: 0 0 0 1em;
+  }
+  #top .about {
+    margin: 0 0 60px;
+  }
+  #top .about .inner h1 {
+    text-align: center;
+    font-size: 22px;
+    font-size: 2.2rem;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  #top .about .inner .ab_read {
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 2;
+    letter-spacing: 1px;
+    margin: 0 0 15px;
+    font-family: "ヒラギノ明朝 Std", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  }
+  #top .about .inner .ab_txt {
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+  }
+  #top .access {
+    margin: 0;
+  }
+  #top .access .inner {
+    width: 100%;
+  }
+  #top .access .inner h1 {
+    text-align: center;
+    font-size: 22px;
+    font-size: 2.2rem;
+    color: #00a7ea;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  #top .access .inner .ac_map {
+    margin-bottom: 10px;
+  }
+  #top .access .inner .ac_map img {
+    display: block;
+  }
+  #top .access .inner .acwrap {
+    overflow: hidden;
+  }
+  #top .access .inner .acwrap .acwrapL {
+    float: inherit;
+    text-align: center;
+  }
+  #top .access .inner .acwrap .acwrapL .ac_add {
+    color: #595757;
+    font-size: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  #top .access .inner .acwrap .acwrapL .ac_tel {
+    margin: 10px auto;
+    color: #ee7800;
+    letter-spacing: 4px;
+    display: table;
+    line-height: 1;
+    font-weight: bold;
+    width: 90%;
+  }
+  #top .access .inner .acwrap .acwrapL .ac_tel span {
+    display: table-cell;
+    vertical-align: bottom;
+    font-size: 20px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 0 5px 0 0;
+  }
+  #top .access .inner .acwrap .acwrapL .ac_tel a {
+    color: #ee7800;
+    display: table-cell;
+    vertical-align: bottom;
+    font-size: 21px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: right;
+  }
+  #top .access .inner .acwrap .acwrapR {
+    float: inherit;
+    text-align: center;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_parking {
+    color: #595757;
+    font-size: 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: table;
+    width: 100%;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_parking span {
+    display: table-cell;
+    color: #ee7800;
+    line-height: 1;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_parking span img {
+    padding-right: 2%;
+    width: 7.5%;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_gmap {
+    margin: 25px auto 0;
+    width: 90%;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_gmap a {
+    font-size: 16px;
+    font-size: 1.6rem;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 3%;
+    border-radius: 10px;
+    background: #00a7ea;
+    float: inherit;
+  }
+  #top .access .inner .acwrap .acwrapR .ac_gmap a:hover {
+    opacity: 0.7;
+  }
+  #top .access .inner .ac_access {
+    margin: 25px 0 0;
+    clear: both;
+    font-size: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.8;
+    letter-spacing: 0;
+    color: #00a7ea;
+    border-top: 1px solid #00a7ea;
+    padding-top: 25px;
+  }
+}
+
+/* ----------------------------------
+
+single
+
+------------------------------------- */
+#single main .pageTitle {
+  color: #fff;
+  background: #00a7ea;
+  padding: 35px 3%;
+  font-size: 35px;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  text-align: center;
+}
+#single main .inner {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#single main .inner article {
+  float: left;
+  width: 65%;
+}
+#single main .inner article .subTitle {
+  display: block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 35px;
+  font-size: 2.3rem;
+  line-height: 1.25;
+}
+#single main .inner article .subTitle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-left: #4c93e9 solid 4px;
+  border-radius: 2px;
+}
+#single main .inner article .subTitle span {
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+  font-size: 58.3%;
+  vertical-align: top;
+  color: #4c93e9;
+}
+#single main .inner article p {
+  line-height: 1.5;
+  font-size: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+#single main .inner article p img {
+  width: auto;
+  height: auto;
+}
+#single main .inner article .wp-post-image {
+  margin-bottom: 30px;
+}
+#single main .inner aside {
+  float: right;
+  width: 30%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 2px solid #00a7ea;
+  border-bottom: 2px solid #00a7ea;
+  margin: 0;
+  padding: 0 2px;
+  z-index: 1;
+}
+#single main .inner aside .sinner {
+  background: #FFFFFF;
+  padding: 20px 18px;
+}
+#single main .inner aside .sinner .sec-side {
+  margin: 0;
+  padding: 0 2px;
+}
+#single main .inner aside .sinner .sec-side h2 {
+  margin: 0 0 20px;
+  padding: 0 2px 2px 6px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+#single main .inner aside .sinner .sec-side h2 a {
+  color: #EC6C50;
+}
+#single main .inner aside .sinner .sec-side .recent-list {
+  margin: 0;
+}
+#single main .inner aside .sinner .sec-side .recent-list li {
+  border-bottom: 1px dashed #999999;
+}
+#single main .inner aside .sinner .sec-side .recent-list li a {
+  display: block;
+  padding: 22px 0 16px 5px;
+}
+#single main .inner aside .sinner .sec-side .recent-list li a:hover {
+  opacity: 0.5;
+}
+#single main .inner aside .sinner .sec-side .recent-list li time {
+  display: block;
+  margin: 0 0 12px 1px;
+  color: #0062B1;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+}
+#single main .inner aside .sinner .sec-side .recent-list li h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+#single main .inner aside .sinner .sec-side .recent-list li:first-child a {
+  padding: 0 0 16px 5px;
+}
+#single main .inner aside .sinner .sec-side .recent-list li:last-child {
+  border-bottom: none;
+}
+@media only screen and (max-width: 840px) {
+  #single main .pageTitle {
+    color: #fff;
+    background: #00a7ea;
+    padding: 15px 3%;
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #single main .inner {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #single main .inner article {
+    float: inherit;
+    width: 100%;
+  }
+  #single main .inner article .subTitle {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+  #single main .inner article .subTitle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: #4c93e9 solid 4px;
+    border-radius: 2px;
+  }
+  #single main .inner article .subTitle span {
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 58.3%;
+    vertical-align: top;
+    color: #4c93e9;
+  }
+  #single main .inner article p {
+    line-height: 1.5;
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  #single main .inner article .wp-post-image {
+    margin-bottom: 30px;
+  }
+  #single main .inner aside {
+    float: inherit;
+    width: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-top: 2px solid #00a7ea;
+    border-bottom: 2px solid #00a7ea;
+    margin: 0;
+    padding: 0 2px;
+    z-index: 1;
+  }
+  #single main .inner aside .sinner {
+    background: #FFFFFF;
+    padding: 20px 0;
+  }
+  #single main .inner aside .sinner .sec-side {
+    margin: 0;
+    padding: 0 2px;
+  }
+  #single main .inner aside .sinner .sec-side h2 {
+    margin: 0 0 10px;
+    padding: 0 2px 2px 6px;
+    color: #EC6C50;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list {
+    margin: 0;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li {
+    border-bottom: 1px dashed #999999;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li a {
+    display: block;
+    padding: 22px 0 16px 5px;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li a:hover {
+    opacity: 0.5;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li time {
+    display: block;
+    margin: 0 0 7px 1px;
+    color: #0062B1;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li h3 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li:first-child a {
+    padding: 0 0 16px 5px;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li:last-child {
+    border-bottom: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #single main .pageTitle {
+    color: #fff;
+    background: #00a7ea;
+    padding: 15px 3%;
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #single main .inner {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #single main .inner article {
+    float: inherit;
+    width: 100%;
+  }
+  #single main .inner article .subTitle {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+  #single main .inner article .subTitle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: #4c93e9 solid 4px;
+    border-radius: 2px;
+  }
+  #single main .inner article .subTitle span {
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 58.3%;
+    vertical-align: top;
+    color: #4c93e9;
+  }
+  #single main .inner article p {
+    line-height: 1.5;
+    font-size: 13px;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  #single main .inner article .wp-post-image {
+    margin-bottom: 30px;
+  }
+  #single main .inner aside {
+    float: inherit;
+    width: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-top: 2px solid #00a7ea;
+    border-bottom: 2px solid #00a7ea;
+    margin: 0;
+    padding: 0 2px;
+    z-index: 1;
+  }
+  #single main .inner aside .sinner {
+    background: #FFFFFF;
+    padding: 20px 0;
+  }
+  #single main .inner aside .sinner .sec-side {
+    margin: 0;
+    padding: 0 2px;
+  }
+  #single main .inner aside .sinner .sec-side h2 {
+    margin: 0 0 10px;
+    padding: 0 2px 2px 6px;
+    color: #EC6C50;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list {
+    margin: 0;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li {
+    border-bottom: 1px dashed #999999;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li a {
+    display: block;
+    padding: 22px 0 16px 5px;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li a:hover {
+    opacity: 0.5;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li time {
+    display: block;
+    margin: 0 0 7px 1px;
+    color: #0062B1;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li h3 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li:first-child a {
+    padding: 0 0 16px 5px;
+  }
+  #single main .inner aside .sinner .sec-side .recent-list li:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ----------------------------------
+
+archives
+
+------------------------------------- */
+#archives main .pageTitle {
+  color: #fff;
+  background: #00a7ea;
+  padding: 35px 3%;
+  font-size: 35px;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  text-align: center;
+}
+#archives main .inner {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#archives main .inner article {
+  float: left;
+  width: 65%;
+}
+#archives main .inner article .post_block {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+#archives main .inner article .post_block:last-child {
+  margin-bottom: 0;
+}
+#archives main .inner article .post_block .subTitle {
+  display: block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 35px;
+  font-size: 2.3rem;
+  line-height: 1.25;
+}
+#archives main .inner article .post_block .subTitle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-left: #4c93e9 solid 4px;
+  border-radius: 2px;
+}
+#archives main .inner article .post_block .subTitle span {
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+  font-size: 58.3%;
+  vertical-align: top;
+  color: #4c93e9;
+}
+#archives main .inner article .post_block p {
+  line-height: 1.5;
+  font-size: 15px;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+#archives main .inner article .post_block .more a {
+  float: right;
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 5%;
+  border-radius: 10px;
+  line-height: 1;
+  font-size: 14px;
+  font-size: 1.4rem;
+  border: 1px solid #ee7800;
+  background: #ee7800;
+}
+#archives main .inner article .post_block .more a:hover {
+  opacity: 0.7;
+}
+#archives main .inner aside {
+  float: right;
+  width: 30%;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 2px solid #00a7ea;
+  border-bottom: 2px solid #00a7ea;
+  margin: 0;
+  padding: 0 2px;
+  z-index: 1;
+}
+#archives main .inner aside .sinner {
+  background: #FFFFFF;
+  padding: 20px 18px;
+}
+#archives main .inner aside .sinner .sec-side {
+  margin: 0;
+  padding: 0 2px;
+}
+#archives main .inner aside .sinner .sec-side h2 {
+  margin: 0 0 20px;
+  padding: 0 2px 2px 6px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+#archives main .inner aside .sinner .sec-side h2 a {
+  color: #EC6C50;
+}
+#archives main .inner aside .sinner .sec-side .recent-list {
+  margin: 0;
+}
+#archives main .inner aside .sinner .sec-side .recent-list li {
+  border-bottom: 1px dashed #999999;
+}
+#archives main .inner aside .sinner .sec-side .recent-list li a {
+  display: block;
+  padding: 22px 0 16px 5px;
+}
+#archives main .inner aside .sinner .sec-side .recent-list li a:hover {
+  opacity: 0.5;
+}
+#archives main .inner aside .sinner .sec-side .recent-list li time {
+  display: block;
+  margin: 0 0 12px 1px;
+  color: #0062B1;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+}
+#archives main .inner aside .sinner .sec-side .recent-list li h3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+#archives main .inner aside .sinner .sec-side .recent-list li:first-child a {
+  padding: 0 0 16px 5px;
+}
+#archives main .inner aside .sinner .sec-side .recent-list li:last-child {
+  border-bottom: none;
+}
+@media only screen and (max-width: 840px) {
+  #archives main .pageTitle {
+    color: #fff;
+    background: #00a7ea;
+    padding: 15px 3%;
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #archives main .inner {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #archives main .inner article {
+    float: inherit;
+    width: 100%;
+  }
+  #archives main .inner article .post_block {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  #archives main .inner article .post_block:last-child {
+    margin-bottom: 0;
+  }
+  #archives main .inner article .post_block .subTitle {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+  #archives main .inner article .post_block .subTitle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: #4c93e9 solid 4px;
+    border-radius: 2px;
+  }
+  #archives main .inner article .post_block .subTitle span {
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 58.3%;
+    vertical-align: top;
+    color: #4c93e9;
+  }
+  #archives main .inner article .post_block p {
+    line-height: 1.5;
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+  #archives main .inner article .post_block .more a {
+    float: inherit;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 5%;
+    border-radius: 10px;
+    line-height: 1;
+    font-size: 14px;
+    font-size: 1.4rem;
+    border: 1px solid #ee7800;
+    background: #ee7800;
+  }
+  #archives main .inner article .post_block .more a:hover {
+    opacity: 0.7;
+  }
+  #archives main .inner aside {
+    float: inherit;
+    width: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-top: 2px solid #00a7ea;
+    border-bottom: 2px solid #00a7ea;
+    margin: 50px 0 0;
+    padding: 0 2px;
+    z-index: 1;
+  }
+  #archives main .inner aside .sinner {
+    background: #FFFFFF;
+    padding: 20px 0;
+  }
+  #archives main .inner aside .sinner .sec-side {
+    margin: 0;
+    padding: 0 2px;
+  }
+  #archives main .inner aside .sinner .sec-side h2 {
+    margin: 0 0 10px;
+    padding: 0 2px 2px 6px;
+    color: #EC6C50;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list {
+    margin: 0;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li {
+    border-bottom: 1px dashed #999999;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li a {
+    display: block;
+    padding: 22px 0 16px 5px;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li a:hover {
+    opacity: 0.5;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li time {
+    display: block;
+    margin: 0 0 7px 1px;
+    color: #0062B1;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li h3 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li:first-child a {
+    padding: 0 0 16px 5px;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li:last-child {
+    border-bottom: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #archives main .pageTitle {
+    color: #fff;
+    background: #00a7ea;
+    padding: 15px 3%;
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  #archives main .inner {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #archives main .inner article {
+    float: inherit;
+    width: 100%;
+  }
+  #archives main .inner article .post_block {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  #archives main .inner article .post_block .subTitle {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+  #archives main .inner article .post_block .subTitle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-left: #4c93e9 solid 4px;
+    border-radius: 2px;
+  }
+  #archives main .inner article .post_block .subTitle span {
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 58.3%;
+    vertical-align: top;
+    color: #4c93e9;
+  }
+  #archives main .inner article .post_block p {
+    line-height: 1.5;
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-top: 15px;
+  }
+  #archives main .inner article .post_block .more a {
+    float: inherit;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 5%;
+    border-radius: 10px;
+    line-height: 1;
+    font-size: 14px;
+    font-size: 1.4rem;
+    border: 1px solid #ee7800;
+    background: #ee7800;
+  }
+  #archives main .inner article .post_block .more a:hover {
+    opacity: 0.7;
+  }
+  #archives main .inner aside {
+    float: inherit;
+    width: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-top: 2px solid #00a7ea;
+    border-bottom: 2px solid #00a7ea;
+    margin: 50px 0 0;
+    padding: 0 2px;
+    z-index: 1;
+  }
+  #archives main .inner aside .sinner {
+    background: #FFFFFF;
+    padding: 20px 0;
+  }
+  #archives main .inner aside .sinner .sec-side {
+    margin: 0;
+    padding: 0 2px;
+  }
+  #archives main .inner aside .sinner .sec-side h2 {
+    margin: 0 0 10px;
+    padding: 0 2px 2px 6px;
+    color: #EC6C50;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list {
+    margin: 0;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li {
+    border-bottom: 1px dashed #999999;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li a {
+    display: block;
+    padding: 22px 0 16px 5px;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li a:hover {
+    opacity: 0.5;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li time {
+    display: block;
+    margin: 0 0 7px 1px;
+    color: #0062B1;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li h3 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li:first-child a {
+    padding: 0 0 16px 5px;
+  }
+  #archives main .inner aside .sinner .sec-side .recent-list li:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ----------------------------------
+
+doctor
+
+------------------------------------- */
+#doctor main {
+  padding: 60px 0 0;
+}
+#doctor main .recruit {
+  background: #f6f7fa;
+  margin-bottom: 70px;
+  padding: 40px 0;
+}
+#doctor main .recruit .wrap {
+  margin: 0 auto;
+  width: 830px;
+}
+#doctor main .recruit .box {
+  background: #fff;
+  border: 8px solid #ee7800;
+  padding: 30px 3%;
+  border-radius: 15px;
+}
+#doctor main .recruit .box__title {
+  font-family: inherit;
+  font-size: 34px;
+  font-size: 3.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ee7800;
+  letter-spacing: 0.5px;
+}
+#doctor main .recruit .box__txt {
+  font-family: inherit;
+  font-size: 19px;
+  font-size: 1.9rem;
+  font-weight: normal;
+  text-align: center;
+  color: #595757;
+  margin-top: 20px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+#doctor main .recruit .box__connection {
+  font-family: inherit;
+  font-size: 19px;
+  font-size: 1.9rem;
+  font-weight: bold;
+  text-align: center;
+  color: #595757;
+  margin-top: 30px;
+}
+#doctor main .introduction .wrap {
+  margin: 0 auto;
+  width: 960px;
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px dashed #000;
+}
+#doctor main .introduction .wrap:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+#doctor main .introduction .inner {
+  margin: 0 auto;
+  width: 695px;
+}
+#doctor main .introduction__title {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 32px;
+  font-size: 3.2rem;
+}
+#doctor main .introduction__eyecatch {
+  margin-bottom: 60px;
+}
+#doctor main .introduction .doctors__title {
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+#doctor main .introduction .history {
+  margin-bottom: 50px;
+}
+#doctor main .introduction .history:last-child {
+  margin-bottom: 0;
+}
+#doctor main .introduction .history__title {
+  font-family: inherit;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-weight: normal;
+  text-align: left;
+  color: #00a7ea;
+  margin-bottom: 10px;
+}
+#doctor main .introduction .history__txt {
+  font-family: inherit;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: left;
+  color: #231815;
+  margin-bottom: 15px;
+  margin-left: 1em;
+}
+#doctor main .introduction .history__txt:last-child {
+  margin-bottom: 0;
+}
+#doctor main .introduction .history__txt span {
+  font-family: inherit;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: left;
+  color: #231815;
+  display: block;
+}
+@media only screen and (max-width: 479px) {
+  #doctor main .recruit {
+    background: none;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  #doctor main .recruit .wrap {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+  #doctor main .recruit .box {
+    background: #fff;
+    border: 4px solid #ee7800;
+    padding: 10px 5%;
+    border-radius: 8px;
+  }
+  #doctor main .recruit .box__title {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ee7800;
+  }
+  #doctor main .recruit .box__txt {
+    font-family: inherit;
+    font-size: 8px;
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-align: center;
+    color: #595757;
+    margin-top: 10px;
+    letter-spacing: 0;
+  }
+  #doctor main .recruit .box__connection {
+    font-family: inherit;
+    font-size: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #595757;
+    margin-top: 10px;
+  }
+  #doctor main .introduction {
+    position: relative;
+  }
+  #doctor main .introduction .inner {
+    margin: 0 auto 0;
+    width: 100%;
+  }
+  #doctor main .introduction .wrap {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed #000;
+  }
+  #doctor main .introduction .wrap:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  #doctor main .introduction .wrap:last-child .inner {
+    margin: 0 auto 0;
+    width: 100%;
+  }
+  #doctor main .introduction .wrap:last-child .inner .doctors__title {
+    margin-top: 0;
+  }
+  #doctor main .introduction__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  #doctor main .introduction__eyecatch {
+    position: absolute;
+    left: -10%;
+    width: 120%;
+  }
+  #doctor main .introduction .doctors__title {
+    margin-top: 180px;
+    margin-bottom: 20px;
+  }
+  #doctor main .introduction .history {
+    margin-bottom: 20px;
+  }
+  #doctor main .introduction .history:last-child {
+    margin-bottom: 0;
+  }
+  #doctor main .introduction .history__title {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #00a7ea;
+    margin-bottom: 10px;
+  }
+  #doctor main .introduction .history__txt {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #231815;
+    margin-bottom: 10px;
+    margin-left: 1em;
+  }
+  #doctor main .introduction .history__txt:last-child {
+    margin-bottom: 0;
+  }
+  #doctor main .introduction .history__txt span {
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #231815;
+    display: block;
+  }
+}
+
+#flow main {
+  padding: 60px 0 0;
+}
+#flow main .tit01 {
+  font-family: inherit;
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00a7ea;
+}
+#flow main .tit02 {
+  font-family: inherit;
+  font-size: 23px;
+  font-size: 2.3rem;
+  text-align: left;
+  color: #00a7ea;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+#flow main .tit03 {
+  font-family: inherit;
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: 100;
+  text-align: left;
+  color: #ee7800;
+  margin-bottom: 10px;
+}
+#flow main .about {
+  padding-top: 70px;
+}
+#flow main .about .wrap {
+  margin: 0 auto;
+  width: 696px;
+  position: relative;
+}
+#flow main .about__txt {
+  font-family: inherit;
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: 100;
+  text-align: left;
+  color: #595757;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+#flow main .about .reserve {
+  margin-bottom: 45px;
+  overflow: hidden;
+}
+#flow main .about .reserve__tit {
+  width: 3em;
+  float: left;
+  font-family: inherit;
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: 400;
+  text-align: left;
+  color: #ee7800;
+  line-height: 1.9;
+}
+#flow main .about .reserve__txt {
+  width: 14em;
+  float: left;
+  font-family: inherit;
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: 400;
+  text-align: left;
+  color: #ee7800;
+  line-height: 1.9;
+}
+#flow main .about__thumb {
+  position: absolute;
+  right: -110px;
+  top: 140px;
+  width: 306px;
+}
+#flow main .about__btn {
+  font-size: 17px;
+  width: 295px;
+  margin-bottom: 50px;
+}
+#flow main .about__btn a {
+  font-family: inherit;
+  font-size: 26px;
+  font-size: 2.6rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  display: block;
+  padding: 4px 3%;
+  border-radius: 25px;
+  border: 1px solid #ee7800;
+  background: #f6b32d;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #f6b32d), color-stop(38%, #ed6b00), color-stop(100%, #ed6b00));
+  background: -webkit-linear-gradient(top, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6b32d), color-stop(38%, #ed6b00), to(#ed6b00));
+  background: linear-gradient(to bottom, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+}
+#flow main .about__btn a:hover {
+  opacity: 0.7;
+}
+#flow main .about__tel {
+  font-family: inherit;
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: 400;
+  text-align: left;
+  color: #ee7800;
+  -webkit-transform: scale(0.8, 1);
+          transform: scale(0.8, 1);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  line-height: 1;
+}
+#flow main .procedure {
+  border-top: 1px dashed #00a7ea;
+  padding-top: 80px;
+  margin: 80px auto 0;
+  width: 958px;
+}
+#flow main .procedure .wrap {
+  margin: 0 auto;
+  width: 696px;
+}
+#flow main .procedure .box {
+  margin-bottom: 55px;
+}
+#flow main .procedure .box__txt {
+  font-family: inherit;
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: 100;
+  text-align: left;
+  color: #595757;
+  line-height: 1.8;
+}
+#flow main .procedure .box__btn {
+  margin-top: 70px;
+  width: 468px;
+}
+#flow main .procedure .box__btn a {
+  display: block;
+}
+#flow main .procedure .box__btn a:hover img {
+  opacity: 0.7;
+}
+#flow main .procedure .box:last-child {
+  margin-bottom: 0;
+  position: relative;
+}
+#flow main .procedure .box:last-child .box__txt {
+  width: 514px;
+}
+#flow main .procedure .box:last-child .box__thumb {
+  position: absolute;
+  right: -130px;
+  top: 50px;
+  width: 303px;
+}
+@media only screen and (max-width: 479px) {
+  #flow main {
+    padding: 30px 0 0;
+  }
+  #flow main .tit01 {
+    font-family: inherit;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+  }
+  #flow main .tit02 {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #00a7ea;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  #flow main .tit03 {
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: left;
+    color: #ee7800;
+    margin-bottom: 5px;
+  }
+  #flow main .about {
+    padding-top: 15px;
+  }
+  #flow main .about .wrap {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    overflow: inherit;
+  }
+  #flow main .about__txt {
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  #flow main .about .reserve {
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  #flow main .about .reserve__tit {
+    width: 3em;
+    float: left;
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+    line-height: 1.9;
+  }
+  #flow main .about .reserve__txt {
+    width: 12em;
+    float: left;
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+    line-height: 1.9;
+  }
+  #flow main .about__thumb {
+    position: absolute;
+    right: -5%;
+    top: 90px;
+    width: 43%;
+  }
+  #flow main .about__btn {
+    margin: 0 auto;
+    width: 85%;
+    margin-bottom: 30px;
+  }
+  #flow main .about__btn a {
+    font-family: inherit;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 8px 3%;
+    border-radius: 25px;
+    border: 1px solid #ee7800;
+    background: #f6b32d;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #f6b32d), color-stop(38%, #ed6b00), color-stop(100%, #ed6b00));
+    background: -webkit-linear-gradient(top, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6b32d), color-stop(38%, #ed6b00), to(#ed6b00));
+    background: linear-gradient(to bottom, #f6b32d 0%, #ed6b00 38%, #ed6b00 100%);
+  }
+  #flow main .about__btn a:hover {
+    opacity: 0.7;
+  }
+  #flow main .about__tel {
+    width: 100%;
+    font-family: inherit;
+    font-size: 30px;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    color: #ee7800;
+    -webkit-transform: scale(0.8, 1);
+            transform: scale(0.8, 1);
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    line-height: 1;
+  }
+  #flow main .procedure {
+    border-top: 1px solid #00a7ea;
+    padding-top: 40px;
+    margin: 40px auto 0;
+    width: 100%;
+  }
+  #flow main .procedure .wrap {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+  #flow main .procedure .box {
+    margin-bottom: 30px;
+  }
+  #flow main .procedure .box__txt {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-align: left;
+    color: #595757;
+    line-height: 1.8;
+  }
+  #flow main .procedure .box__btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+  #flow main .procedure .box__btn a {
+    display: block;
+  }
+  #flow main .procedure .box__btn a:hover img {
+    opacity: 0.7;
+  }
+  #flow main .procedure .box:last-child {
+    margin-bottom: 0;
+    position: inherit;
+  }
+  #flow main .procedure .box:last-child .box__txt {
+    width: 100%;
+  }
+  #flow main .procedure .box:last-child .box__thumb {
+    position: inherit;
+    right: inherit;
+    top: inherit;
+    width: 80%;
+    margin: 0 auto;
+    width: 80%;
+  }
+  #flow main .procedure .box:last-child .box__thumb img {
+    width: 100%;
+  }
+}
+
+/* ----------------------------------
+
+
+
+access
+
+------------------------------------- */
+#access main {
+  padding: 60px 0 0;
+}
+#access main .tit01 {
+  font-family: inherit;
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00a7ea;
+  margin-bottom: 60px;
+}
+#access main .tit02 {
+  font-family: inherit;
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00a7ea;
+  margin-bottom: 30px;
+}
+#access main .businesshours {
+  background: #f6f7fa;
+  margin: 0;
+}
+#access main .businesshours .inner {
+  padding: 60px 0;
+}
+#access main .businesshours .inner .op_img {
+  margin: 0 0 60px;
+}
+#access main .businesshours .inner .op_img img {
+  display: block;
+}
+#access main .businesshours .inner .op_att {
+  margin: 0 auto;
+  width: 600px;
+}
+#access main .businesshours .inner .op_att li {
+  font-family: inherit;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: left;
+  color: #595757;
+  margin-bottom: 40px;
+  border-left: 4px solid #00a7ea;
+  padding-left: 15px;
+  letter-spacing: 0.5px;
+}
+#access main .businesshours .inner .op_att li:last-child {
+  margin-bottom: 0;
+}
+#access main .access .inner {
+  padding: 60px 0 0;
+}
+#access main .access__add {
+  font-family: inherit;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-weight: 400;
+  text-align: center;
+  color: #595757;
+  margin-top: 25px;
+  letter-spacing: 1px;
+}
+#access main .access__gmap {
+  margin-top: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #00a7ea;
+}
+#access main .access__gmap iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+}
+#access main .access__how {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+#access main .access__how dt {
+  font-family: inherit;
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-align: left;
+  color: #ee7800;
+  margin-top: 50px;
+  letter-spacing: 1px;
+}
+#access main .access__how dt:first-child {
+  margin-top: 0;
+}
+#access main .access__how dt img {
+  width: 50px;
+}
+#access main .access__how dd {
+  font-family: inherit;
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-align: left;
+  color: #00a7ea;
+  margin-top: 5px;
+  margin-left: 0;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+#access main .access__how dd span {
+  font-family: inherit;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: left;
+  color: #00a7ea;
+}
+#access main .access__tel {
+  margin-top: 25px;
+  font-family: inherit;
+  font-size: 31px;
+  font-size: 3.1rem;
+  font-weight: 400;
+  text-align: left;
+  color: #ee7800;
+}
+#access main .access__tel span {
+  font-family: inherit;
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: 400;
+  text-align: left;
+  color: #ee7800;
+}
+#access main .access__tel a {
+  font-family: inherit;
+  font-size: 31px;
+  font-size: 3.1rem;
+  font-weight: 400;
+  text-align: left;
+  color: #ee7800;
+  letter-spacing: 2px;
+}
+@media only screen and (max-width: 840px) {
+  #access .pcArea {
+    display: none !important;
+  }
+  #access .spArea {
+    display: block !important;
+  }
+  #access main {
+    padding: 30px 0 0;
+  }
+  #access main .tit01 {
+    font-family: inherit;
+    font-size: 32px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+    margin-bottom: 30px;
+  }
+  #access main .tit02 {
+    font-family: inherit;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+    margin-bottom: 30px;
+  }
+  #access main .businesshours {
+    background: #fff;
+    margin: 0;
+  }
+  #access main .businesshours .inner {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+  #access main .businesshours .inner .op_img {
+    margin: 0 0 50px;
+  }
+  #access main .businesshours .inner .op_img img {
+    display: block;
+  }
+  #access main .businesshours .inner .op_att {
+    margin: 0 auto;
+    width: 100%;
+  }
+  #access main .businesshours .inner .op_att li {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-align: left;
+    color: #595757;
+    margin-bottom: 40px;
+    border-left: 4px solid #00a7ea;
+    padding-left: 15px;
+    letter-spacing: 0.5px;
+  }
+  #access main .businesshours .inner .op_att li:last-child {
+    margin-bottom: 0;
+  }
+  #access main .access .inner {
+    padding: 60px 0 0;
+  }
+  #access main .access__add {
+    font-family: inherit;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: #595757;
+    margin-top: 25px;
+    letter-spacing: 1px;
+  }
+  #access main .access__gmap {
+    margin-top: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 3px solid #00a7ea;
+  }
+  #access main .access__gmap iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+  }
+  #access main .access__how {
+    margin-top: 30px;
+  }
+  #access main .access__how dt {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+    margin-top: 30px;
+    letter-spacing: 1px;
+  }
+  #access main .access__how dt:first-child {
+    margin-top: 0;
+  }
+  #access main .access__how dt img {
+    width: 30px;
+  }
+  #access main .access__how dd {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-align: left;
+    color: #00a7ea;
+    margin-top: 5px;
+    margin-left: 0;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+  #access main .access__how dd span {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-align: left;
+    color: #00a7ea;
+  }
+  #access main .access__tel {
+    margin-top: 25px;
+    font-family: inherit;
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+  }
+  #access main .access__tel span {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+  }
+  #access main .access__tel a {
+    font-family: inherit;
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+    letter-spacing: 2px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #access .pcArea {
+    display: none !important;
+  }
+  #access .spArea {
+    display: block !important;
+  }
+  #access main {
+    padding: 30px 0 0;
+  }
+  #access main .tit01 {
+    font-family: inherit;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+    margin-bottom: 30px;
+  }
+  #access main .businesshours {
+    background: #fff;
+    margin: 0;
+  }
+  #access main .businesshours .inner {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+  #access main .businesshours .inner .op_img {
+    margin: 0 0 50px;
+  }
+  #access main .businesshours .inner .op_img img {
+    display: block;
+  }
+  #access main .businesshours .inner .op_att {
+    margin: 0 auto;
+    width: 100%;
+  }
+  #access main .businesshours .inner .op_att li {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: left;
+    color: #595757;
+    margin-bottom: 30px;
+    border-left: 4px solid #00a7ea;
+    padding-left: 10px;
+    letter-spacing: 0.5px;
+  }
+  #access main .businesshours .inner .op_att li:last-child {
+    margin-bottom: 0;
+  }
+  #access main .access .inner {
+    padding: 60px 0 0;
+  }
+  #access main .access__add {
+    font-family: inherit;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #595757;
+    margin-top: 15px;
+    letter-spacing: 0;
+  }
+  #access main .access__gmap {
+    margin-top: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid #00a7ea;
+  }
+  #access main .access__gmap iframe {
+    display: block;
+    width: 100%;
+    height: 250px;
+  }
+  #access main .access__how {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  #access main .access__how dt {
+    font-family: inherit;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+    margin-top: 30px;
+    letter-spacing: 1px;
+  }
+  #access main .access__how dt:first-child {
+    margin-top: 0;
+  }
+  #access main .access__how dt img {
+    width: 30px;
+  }
+  #access main .access__how dd {
+    font-family: inherit;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    color: #00a7ea;
+    margin-top: 5px;
+    margin-left: 0;
+    line-height: 1.4;
+    letter-spacing: 1px;
+  }
+  #access main .access__how dd span {
+    font-family: inherit;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: left;
+    color: #00a7ea;
+  }
+  #access main .access__tel {
+    margin-top: 25px;
+    font-family: inherit;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+  }
+  #access main .access__tel span {
+    font-family: inherit;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+  }
+  #access main .access__tel a {
+    font-family: inherit;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: left;
+    color: #ee7800;
+    letter-spacing: 2px;
+  }
+}
+
+#clinic main {
+  padding: 60px 0 0;
+}
+#clinic main .tit01 {
+  font-family: inherit;
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00a7ea;
+}
+#clinic main .tit02 {
+  font-family: inherit;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-weight: 100;
+  text-align: left;
+  color: #00a7ea;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+#clinic main .introduction {
+  padding-top: 70px;
+}
+#clinic main .introduction .wrap {
+  margin: 0 auto;
+  width: 696px;
+  position: relative;
+}
+#clinic main .introduction .cal__img {
+  margin: 0;
+}
+#clinic main .introduction .cal__tit {
+  font-family: inherit;
+  font-size: 21px;
+  font-size: 2.1rem;
+  font-weight: bold;
+  text-align: left;
+  color: #0095E5;
+  margin-top: 0.3em;
+}
+#clinic main .introduction .cal__tit span {
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  padding-left: 1em;
+}
+#clinic main .introduction .cal_1, #clinic main .introduction .cal_2 {
+  margin-bottom: 3em;
+}
+#clinic main .introduction .cal_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+}
+#clinic main .introduction .cal_2 div {
+  width: 48.5%;
+}
+#clinic main .introduction .cal_2 div .cal__tit span {
+  display: block;
+  margin-top: 0.3em;
+  padding-left: 0;
+}
+#clinic main .introduction .cal_3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+#clinic main .introduction .cal_3 div {
+  width: 31.3%;
+}
+#clinic main .introduction .cal_3 div .cal__tit {
+  text-align: center;
+}
+#clinic main .introduction .cal_3 div .cal__tit span {
+  display: inline-block;
+  margin-top: 0.3em;
+  padding-left: 0;
+  font-family: inherit;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: center;
+  color: #0095E5;
+}
+@media only screen and (max-width: 840px) {
+  #clinic main .introduction {
+    padding-top: 30px;
+  }
+  #clinic main .introduction .wrap {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+  #clinic main .introduction .cal__img {
+    margin: 0;
+  }
+  #clinic main .introduction .cal__tit {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: left;
+    color: #0095E5;
+    margin-top: 0.3em;
+  }
+  #clinic main .introduction .cal__tit span {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    padding-left: 0;
+    display: block;
+  }
+  #clinic main .introduction .cal_1, #clinic main .introduction .cal_2 {
+    margin-bottom: 1.5em;
+  }
+  #clinic main .introduction .cal_2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -ms-flex-pack: space-between;
+  }
+  #clinic main .introduction .cal_2 div {
+    width: 48.5%;
+  }
+  #clinic main .introduction .cal_2 div .cal__tit span {
+    display: block;
+    margin-top: 0.3em;
+    padding-left: 0;
+  }
+  #clinic main .introduction .cal_3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  #clinic main .introduction .cal_3 div {
+    width: 48.5%;
+    margin-bottom: 1em;
+  }
+  #clinic main .introduction .cal_3 div .cal__tit {
+    text-align: center;
+  }
+  #clinic main .introduction .cal_3 div .cal__tit span {
+    display: inline-block;
+    margin-top: 0.3em;
+    padding-left: 0;
+    font-family: inherit;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-align: center;
+    color: #0095E5;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #clinic main {
+    padding: 20px 0 0;
+  }
+  #clinic main .tit01 {
+    font-family: inherit;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+  }
+  #clinic main .tit02 {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
+
+#link main {
+  padding: 30px 0 0;
+}
+#link main .tit01 {
+  font-family: inherit;
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00a7ea;
+}
+#link main .tit02 {
+  font-family: inherit;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-weight: 100;
+  text-align: left;
+  color: #00a7ea;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+#link main .introduce {
+  margin: 0 auto;
+  width: 830px;
+  padding-top: 70px;
+}
+#link main .introduce dl {
+  margin-bottom: 8em;
+}
+#link main .introduce dd {
+  margin-left: 0;
+}
+#link main .introduce__tit {
+  margin-top: 2em;
+}
+#link main .introduce__tit a {
+  font-family: inherit;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-weight: normal;
+  text-align: left;
+  color: #333;
+}
+#link main .introduce__tit a:hover {
+  text-decoration: underline;
+}
+#link main .introduce__link {
+  font-family: inherit;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-align: left;
+  color: #333;
+  margin-top: 0;
+}
+#link main .introduce__link a:hover {
+  text-decoration: underline;
+}
+#link main .introduce__txt {
+  font-family: inherit;
+  font-size: 19px;
+  font-size: 1.9rem;
+  font-weight: normal;
+  text-align: left;
+  color: #333;
+  margin-top: 0.5em;
+}
+@media only screen and (max-width: 840px) {
+  #link main {
+    padding: 15px 0 0;
+  }
+  #link main .tit01 {
+    font-family: inherit;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+    margin-bottom: 30px;
+  }
+  #link main .tit02 {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 100;
+    text-align: left;
+    color: #00a7ea;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  #link main .introduce {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 0;
+  }
+  #link main .introduce dl {
+    margin-bottom: 4em;
+  }
+  #link main .introduce dd {
+    margin-left: 0;
+  }
+  #link main .introduce__tit {
+    margin-top: 2em;
+  }
+  #link main .introduce__tit a {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    color: #333;
+  }
+  #link main .introduce__tit a:hover {
+    text-decoration: underline;
+  }
+  #link main .introduce__link {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #333;
+    margin-top: 0;
+  }
+  #link main .introduce__link a {
+    word-break: break-all;
+  }
+  #link main .introduce__link a:hover {
+    text-decoration: underline;
+  }
+  #link main .introduce__txt {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #333;
+    margin-top: 0.5em;
+  }
+}
+/* リンクページデザイン変更 ここから*/
+.link-page {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+ul.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+ul.link-list li {
+  width: calc(50% - 1rem);
+  transition: 0.3s linear;
+}
+
+@media (min-width: 768px) {
+  ul.link-list li {
+    width: calc(33.3333% - 1.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  ul.link-list li {
+    width: calc(25% - 2rem);
+  }
+}
+
+ul.link-list li a {
+  display: block;
+  text-decoration: none;
+  color: #888;
+  transition: 0.3s linear;
+}
+
+ul.link-list li a img {
+  display: block;
+  width: 100%;
+  border: 0.1rem solid #ccc;
+  transition: 0.3s linear;
+}
+
+ul.link-list li a:hover img {
+  opacity: 0.7;
+}
+
+ul.link-list li p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+
+ul.link-list li p:nth-of-type(2) {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #ae8c73;
+  background-color: #fcf6ef;
+  transition: 0.3s linear;
+}
+/* リンクページデザイン変更 ここまで*/
+.medical {
+  /* ----------------------------------
+  小児科
+  ------------------------------------- */
+  /* ----------------------------------
+  アレルギー科
+  ------------------------------------- */
+  /* ----------------------------------
+  小児皮膚科
+  ------------------------------------- */
+  /* ----------------------------------
+  舌下免疫療法
+  ------------------------------------- */
+  /* ----------------------------------
+  予防接種
+  ------------------------------------- */
+  /* ----------------------------------
+  乳幼児健診
+  ------------------------------------- */
+}
+.medical main {
+  padding: 60px 0 0;
+}
+.medical main .tit01 {
+  font-family: inherit;
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00a7ea;
+  margin-bottom: 60px;
+}
+.medical main .tit02 {
+  font-family: inherit;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: left;
+  color: #00a7ea;
+  margin: 0 0 0.5em;
+}
+.medical main .tit03 {
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  color: #EE7800;
+}
+.medical main .wrap {
+  margin: 0 auto;
+  width: 696px;
+  padding: 30px 0;
+}
+.medical main .wrap2 {
+  margin: 0 auto;
+  width: 960px;
+}
+.medical main .med01,
+.medical main .med03 {
+  background: #F6F7FA;
+}
+.medical main .box1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+}
+.medical main .box1__txt {
+  width: 56%;
+  font-family: inherit;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  line-height: 1.5;
+}
+.medical main .box1__img {
+  width: 40%;
+}
+.medical main .box2 {
+  margin: 2em 0 0;
+}
+.medical main .box2__txt {
+  font-family: inherit;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  line-height: 1.5;
+}
+.medical main .box2__txt span {
+  font-family: inherit;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical01 main .box1__img {
+  margin-top: -20px;
+}
+.medical#medical01 main .box2 .list {
+  margin-top: 60px;
+}
+.medical#medical01 main .box2 .list__item {
+  font-family: inherit;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  text-indent: -1em;
+  margin-left: 1em;
+}
+.medical#medical01 main .box2 .list__item span {
+  font-family: inherit;
+  font-size: 13px;
+  font-size: 1.3rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical01 main .box2 .list__item:nth-child(8) {
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+}
+.medical#medical01 main .box3 .symptom {
+  border: 2px solid #00a7ea;
+  background: #fff;
+  margin: 4em 0 0;
+  padding: 15px 3%;
+  border-radius: 8px;
+}
+.medical#medical01 main .box3 .symptom__tit {
+  font-family: inherit;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-align: left;
+  color: #00a7ea;
+  margin: 0 0 1em;
+}
+.medical#medical01 main .box3 .symptom__txt {
+  font-family: inherit;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  line-height: 1.5;
+  margin: 0;
+}
+.medical#medical02 main .med01 .box1__img {
+  margin-top: -20px;
+}
+.medical#medical02 main .med01 .box3 {
+  margin-top: 0;
+}
+.medical#medical02 main .med01 .box3__tit {
+  font-family: inherit;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-align: left;
+  color: #00a7ea;
+  margin: 0 0 1em;
+}
+.medical#medical02 main .med01 .box3__txt {
+  font-family: inherit;
+  font-size: 17px;
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  line-height: 1.5;
+  margin: 0;
+}
+.medical#medical02 main .med03 .wrap {
+  margin: 0 auto;
+  width: 960px;
+}
+.medical#medical03 main .box1__txt {
+  width: 68%;
+}
+.medical#medical03 main .box1__img {
+  width: 30%;
+}
+.medical#medical03 main .box1__img img {
+  width: auto;
+}
+.medical#medical03 main .box2 .tit03 {
+  margin-bottom: 0.3em;
+}
+.medical#medical03 main .box2__txt {
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  line-height: 1.5;
+  margin: 0 0 60px;
+}
+.medical#medical03 main .box2 .list {
+  margin-top: 0;
+}
+.medical#medical03 main .box2 .list__item {
+  font-family: inherit;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  text-indent: -1em;
+  margin-left: 1em;
+}
+.medical#medical03 main .box2 .list__item span {
+  font-family: inherit;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical03 main .box2 .list__item:nth-child(10) {
+  line-height: 1.3;
+}
+.medical#medical04 main .med01 .box1__txt {
+  width: 56%;
+}
+.medical#medical04 main .med01 .box1__img {
+  width: 60%;
+  margin-top: -80px;
+}
+.medical#medical04 main .med01 .box2 .att__list {
+  text-indent: -1em;
+  margin-left: 1em;
+  font-family: inherit;
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical04 main .med01 .box2 .things__list {
+  text-indent: -1em;
+  margin-left: 1em;
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical04 main .med01 .box2 .things__list span {
+  font-family: inherit;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical04 main .med01 .tit03 {
+  margin-top: 2em;
+}
+.medical#medical05 main .box1__img {
+  margin-top: -100px;
+}
+.medical#medical05 main .box3 {
+  border: 1px solid #EE7800;
+  padding: 20px 3%;
+}
+.medical#medical05 main .box3 .cassette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+  margin-bottom: 0;
+}
+.medical#medical05 main .box3 .cassette__tit {
+  font-family: inherit;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  color: #EE7800;
+  line-height: 1.5;
+  -webkit-align-self: auto;
+  -ms-align-self: auto;
+  -ms-flex-item-align: auto;
+      align-self: auto;
+  width: 15%;
+  margin: 0 0 1em;
+}
+.medical#medical05 main .box3 .cassette__txt {
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  line-height: 1.5;
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 80%;
+  margin: 0 0 1em;
+}
+.medical#medical05 main .box3 .cassette__att {
+  font-family: inherit;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+  line-height: 1.5;
+  margin-top: 1em;
+  text-indent: -1em;
+  margin-left: 1em;
+}
+.medical#medical05 main .box3 .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+  width: 80%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+.medical#medical05 main .box3 .btn__item:last-of-type {
+  margin-left: 15px;
+}
+.medical#medical05 main .box3 .btn__item a {
+  display: block;
+}
+.medical#medical05 main .box3 .btn__item a:hover img {
+  opacity: 0.7;
+}
+.medical#medical05 main .wrap2 .read {
+  font-family: inherit;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-align: center;
+  color: #595757;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+.medical#medical05 main .wrap2 .att {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+  margin-top: 1em;
+  padding-bottom: 70px;
+}
+.medical#medical05 main .wrap2 .att p:first-child {
+  width: 85%;
+  line-height: 1.5;
+  font-family: inherit;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical05 main .wrap2 .att p:nth-child(2) {
+  width: 10%;
+  line-height: 1.5;
+  font-family: inherit;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: right;
+  color: #595757;
+}
+.medical#medical05 main .med01 .tit03 {
+  margin-top: 2em;
+  text-align: center;
+}
+.medical#medical05 main .med02 .wrap {
+  margin: 0 auto;
+  width: 724px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+}
+.medical#medical05 main .med02 .wrap p:first-child {
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: left;
+  color: #EE7800;
+  line-height: 1.5;
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 38%;
+}
+.medical#medical05 main .med02 .wrap p:nth-child(2) {
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 3%;
+}
+.medical#medical05 main .med02 .wrap ul {
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: left;
+  color: #EE7800;
+  -webkit-align-self: center;
+  -ms-align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  line-height: 1.5;
+  margin: 0;
+  width: 53%;
+}
+.medical#medical05 main .med03 .wrap .tit03 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.medical#medical05 main .med03 .wrap .tit03:first-child {
+  margin-top: 0;
+}
+.medical#medical05 main .med03 .wrap p {
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical05 main .med03 .wrap ul {
+  margin-bottom: 0;
+}
+.medical#medical05 main .med03 .wrap ul li {
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical05 main .med03 .wrap ul li span {
+  font-family: inherit;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical05 main .med03 .wrap .banner {
+  margin-top: 3em;
+  width: 470px;
+}
+.medical#medical05 main .med03 .wrap .banner a:hover {
+  opacity: 0.7;
+}
+.medical#medical06 main .med01 .box1__img {
+  margin-top: -20px;
+}
+.medical#medical06 main .med01 .box2 .att__list {
+  text-indent: -1em;
+  margin-left: 1em;
+  font-family: inherit;
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical06 main .med01 .box2 .things__list {
+  text-indent: -1em;
+  margin-left: 1em;
+  font-family: inherit;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical06 main .med01 .box2 .things__list span {
+  font-family: inherit;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-align: left;
+  color: #595757;
+}
+.medical#medical06 main .med01 .tit03 {
+  margin-top: 2em;
+}
+@media only screen and (max-width: 840px) {
+  .medical {
+    /* ----------------------------------
+    小児科
+    ------------------------------------- */
+    /* ----------------------------------
+    アレルギー科
+    ------------------------------------- */
+    /* ----------------------------------
+    小児皮膚科
+    ------------------------------------- */
+    /* ----------------------------------
+    舌下免疫療法
+    ------------------------------------- */
+    /* ----------------------------------
+    予防接種
+    ------------------------------------- */
+    /* ----------------------------------
+    乳幼児健診
+    ------------------------------------- */
+  }
+  .medical main {
+    padding: 20px 0 0;
+  }
+  .medical main .tit01 {
+    font-family: inherit;
+    font-size: 32px;
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+    margin-bottom: 30px;
+  }
+  .medical main .tit02 {
+    font-family: inherit;
+    font-size: 23px;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: left;
+    color: #00a7ea;
+    margin: 0 0 0.5em;
+  }
+  .medical main .tit03 {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: left;
+    color: #EE7800;
+  }
+  .medical main .wrap {
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 0;
+  }
+  .medical main .wrap2 {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .medical main .med01,
+.medical main .med03 {
+    background: #fff;
+  }
+  .medical main .box1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -ms-flex-pack: space-between;
+  }
+  .medical main .box1__txt {
+    width: 56%;
+    font-family: inherit;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+  }
+  .medical main .box1__img {
+    width: 40%;
+  }
+  .medical main .box2 {
+    margin: 2em 0 0;
+  }
+  .medical main .box2__txt {
+    font-family: inherit;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+  }
+  .medical#medical01 main .box1__img {
+    margin-top: 0;
+  }
+  .medical#medical01 main .box2 .list {
+    margin-top: 60px;
+  }
+  .medical#medical01 main .box2 .list__item {
+    font-family: inherit;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    text-indent: -1em;
+    margin-left: 1em;
+  }
+  .medical#medical01 main .box2 .list__item span {
+    font-family: inherit;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical01 main .box2 .list__item:nth-child(8) {
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+  }
+  .medical#medical01 main .box3 .symptom {
+    border: 2px solid #00a7ea;
+    background: #fff;
+    margin: 4em 0 0;
+    padding: 15px 3%;
+    border-radius: 8px;
+  }
+  .medical#medical01 main .box3 .symptom__tit {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: left;
+    color: #00a7ea;
+    margin: 0 0 1em;
+  }
+  .medical#medical01 main .box3 .symptom__txt {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .medical#medical02 main .med01 .box1__img {
+    margin-top: 0;
+  }
+  .medical#medical02 main .med01 .box3 {
+    margin-top: 0;
+  }
+  .medical#medical02 main .med01 .box3__tit {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: left;
+    color: #00a7ea;
+    margin: 0 0 1em;
+  }
+  .medical#medical02 main .med01 .box3__txt {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .medical#medical02 main .med03 .wrap {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .medical#medical03 main .box1__txt {
+    width: 68%;
+  }
+  .medical#medical03 main .box1__img {
+    width: 30%;
+  }
+  .medical#medical03 main .box1__img img {
+    width: auto;
+  }
+  .medical#medical03 main .box2 .tit03 {
+    margin-bottom: 0.3em;
+  }
+  .medical#medical03 main .box2__txt {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    margin: 0 0 60px;
+  }
+  .medical#medical03 main .box2 .list {
+    margin-top: 0;
+  }
+  .medical#medical03 main .box2 .list__item {
+    font-family: inherit;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    text-indent: -1em;
+    margin-left: 1em;
+  }
+  .medical#medical03 main .box2 .list__item span {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical03 main .box2 .list__item:nth-child(10) {
+    line-height: 1.3;
+  }
+  .medical#medical04 main .med01 .box1__img {
+    margin-top: 0;
+  }
+  .medical#medical04 main .med01 .box2 .att__list {
+    text-indent: -1em;
+    margin-left: 1em;
+    font-family: inherit;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical04 main .med01 .box2 .things__list {
+    text-indent: -1em;
+    margin-left: 1em;
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical04 main .med01 .box2 .things__list span {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical04 main .med01 .tit03 {
+    margin-top: 2em;
+  }
+  .medical#medical05 main .box1__img {
+    margin-top: 0;
+  }
+  .medical#medical05 main .cassette {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -ms-flex-pack: space-between;
+  }
+  .medical#medical05 main .cassette__tit {
+    font-family: inherit;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: normal;
+    text-align: center;
+    color: #EE7800;
+    line-height: 1.5;
+    -webkit-align-self: center;
+    -ms-align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 15%;
+    margin: 0 0 1em;
+  }
+  .medical#medical05 main .cassette__txt {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    -webkit-align-self: center;
+    -ms-align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 80%;
+    margin: 0 0 1em;
+  }
+  .medical#medical05 main .cassette__att {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    margin-top: 1em;
+    text-indent: -1em;
+    margin-left: 1em;
+  }
+  .medical#medical05 main .wrap2 .att {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -ms-flex-pack: space-between;
+    margin-top: 1em;
+    padding-bottom: 30px;
+  }
+  .medical#medical05 main .wrap2 .att p:first-child {
+    width: 75%;
+    line-height: 1.5;
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical05 main .wrap2 .att p:nth-child(2) {
+    width: 20%;
+    line-height: 1.5;
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: right;
+    color: #595757;
+  }
+  .medical#medical05 main .med01 .tit03 {
+    margin-top: 2em;
+    text-align: center;
+  }
+  .medical#medical05 main .med02 .wrap {
+    margin: 0 auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -ms-flex-pack: space-between;
+  }
+  .medical#medical05 main .med02 .wrap p:first-child {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: center;
+    color: #EE7800;
+    line-height: 1.5;
+    -webkit-align-self: center;
+    -ms-align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 100%;
+  }
+  .medical#medical05 main .med02 .wrap p:nth-child(2) {
+    -webkit-align-self: center;
+    -ms-align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    text-align: center;
+    width: 3%;
+  }
+  .medical#medical05 main .med02 .wrap p:nth-child(2) img {
+    -webkit-transform: rotatez(90deg);
+            transform: rotatez(90deg);
+  }
+  .medical#medical05 main .med02 .wrap ul {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: center;
+    color: #EE7800;
+    -webkit-align-self: center;
+    -ms-align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    line-height: 1.5;
+    margin: 0;
+    width: 100%;
+  }
+  .medical#medical05 main .med03 .wrap .tit03 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
+  .medical#medical05 main .med03 .wrap .tit03:first-child {
+    margin-top: 0;
+  }
+  .medical#medical05 main .med03 .wrap p {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical05 main .med03 .wrap ul {
+    margin-bottom: 0;
+  }
+  .medical#medical05 main .med03 .wrap ul li {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical05 main .med03 .wrap ul li span {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical05 main .med03 .wrap .banner {
+    margin-top: 3em;
+    width: 470px;
+  }
+  .medical#medical05 main .med03 .wrap .banner a:hover {
+    opacity: 0.7;
+  }
+  .medical#medical06 main .med01 .box1__img {
+    margin-top: 0;
+  }
+  .medical#medical06 main .med01 .box2 .att__list {
+    text-indent: -1em;
+    margin-left: 1em;
+    font-family: inherit;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical06 main .med01 .box2 .things__list {
+    text-indent: -1em;
+    margin-left: 1em;
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical06 main .med01 .box2 .things__list span {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical06 main .med01 .tit03 {
+    margin-top: 2em;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .medical {
+    /* ----------------------------------
+    小児科
+    ------------------------------------- */
+    /* ----------------------------------
+    アレルギー科
+    ------------------------------------- */
+    /* ----------------------------------
+    小児皮膚科
+    ------------------------------------- */
+    /* ----------------------------------
+    舌下免疫療法
+    ------------------------------------- */
+    /* ----------------------------------
+    予防接種
+    ------------------------------------- */
+    /* ----------------------------------
+    乳幼児健診
+    ------------------------------------- */
+  }
+  .medical main .tit01 {
+    font-family: inherit;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+    margin-bottom: 0;
+  }
+  .medical main .tit02 {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: left;
+    color: #00a7ea;
+    margin: 0 0 0.5em;
+  }
+  .medical main .tit03 {
+    font-family: inherit;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: left;
+    color: #EE7800;
+  }
+  .medical main .wrap {
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 0;
+  }
+  .medical main .wrap2 {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .medical main .med01,
+.medical main .med03 {
+    background: #fff;
+  }
+  .medical main .box1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  .medical main .box1__txt {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+  }
+  .medical main .box1__img {
+    width: 100%;
+  }
+  .medical main .box2 {
+    margin: 2em 0 0;
+  }
+  .medical main .box2__txt {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+  }
+  .medical#medical01 main .box1__img {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .medical#medical01 main .box1__img img {
+    width: 70%;
+  }
+  .medical#medical01 main .box2 .list {
+    margin-top: 30px;
+  }
+  .medical#medical01 main .box2 .list__item {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    text-indent: -1em;
+    margin-left: 1em;
+  }
+  .medical#medical01 main .box2 .list__item span {
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical01 main .box2 .list__item:nth-child(8) {
+    line-height: 1.3;
+    margin-bottom: 0.5em;
+  }
+  .medical#medical01 main .box3 .symptom {
+    border: 2px solid #00a7ea;
+    background: #fff;
+    margin: 2em 0 0;
+    padding: 15px 3%;
+    border-radius: 8px;
+  }
+  .medical#medical01 main .box3 .symptom__tit {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #00a7ea;
+    margin: 0 0 1em;
+  }
+  .medical#medical01 main .box3 .symptom__txt {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .medical#medical02 main .med01 .box1__img {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .medical#medical02 main .med01 .box1__img img {
+    width: 50%;
+  }
+  .medical#medical02 main .med01 .box3 {
+    margin-top: 0;
+  }
+  .medical#medical02 main .med01 .box3__tit {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: left;
+    color: #00a7ea;
+    margin: 0 0 1em;
+  }
+  .medical#medical02 main .med01 .box3__txt {
+    font-family: inherit;
+    font-size: 17px;
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .medical#medical02 main .med03 .wrap {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+  .medical#medical03 main .box1__txt {
+    width: 100%;
+  }
+  .medical#medical03 main .box1__img {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .medical#medical03 main .box1__img img {
+    width: 40%;
+  }
+  .medical#medical03 main .box2 .tit03 {
+    margin-bottom: 0.3em;
+  }
+  .medical#medical03 main .box2__txt {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    margin: 0 0 30px;
+  }
+  .medical#medical03 main .box2 .list {
+    margin-top: 0;
+  }
+  .medical#medical03 main .box2 .list__item {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    text-indent: -1em;
+    margin-left: 1em;
+  }
+  .medical#medical03 main .box2 .list__item span {
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical03 main .box2 .list__item:nth-child(10) {
+    line-height: 1.3;
+  }
+  .medical#medical04 main .med01 .box1__txt {
+    width: 100%;
+  }
+  .medical#medical04 main .med01 .box1__img {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .medical#medical04 main .med01 .box1__img img {
+    width: 70%;
+  }
+  .medical#medical04 main .med01 .box2 .tit03 {
+    margin-bottom: 0.3em;
+  }
+  .medical#medical04 main .med01 .box2 .att__list {
+    text-indent: -1em;
+    margin-left: 1em;
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical04 main .med01 .tit03 {
+    margin-top: 2em;
+  }
+  .medical#medical05 main .box1__img {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .medical#medical05 main .box1__img img {
+    width: 60%;
+  }
+  .medical#medical05 main .box3 {
+    border: 1px solid #EE7800;
+    padding: 15px 3%;
+  }
+  .medical#medical05 main .box3 .cassette {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    margin-bottom: 0;
+  }
+  .medical#medical05 main .box3 .cassette__tit {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #EE7800;
+    line-height: 1.5;
+    width: 100%;
+    margin: 0;
+  }
+  .medical#medical05 main .box3 .cassette__txt {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    width: 100%;
+    margin: 0 0 1em;
+  }
+  .medical#medical05 main .box3 .cassette__att {
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    line-height: 1.5;
+    margin-top: 1em;
+    text-indent: -1em;
+    margin-left: 1em;
+  }
+  .medical#medical05 main .box3 .btn {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+  .medical#medical05 main .box3 .btn__item {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .medical#medical05 main .box3 .btn__item:last-of-type {
+    margin-left: auto;
+    margin-top: 10px;
+  }
+  .medical#medical05 main .box3 .btn__item a {
+    display: block;
+  }
+  .medical#medical05 main .box3 .btn__item a:hover img {
+    opacity: 0.7;
+  }
+  .medical#medical05 main .wrap2 .tit03 {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+  }
+  .medical#medical05 main .wrap2 .att {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column-reverse;
+    -moz-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+    margin-top: 0.5em;
+    padding-bottom: 30px;
+  }
+  .medical#medical05 main .wrap2 .att p:first-child {
+    margin-top: 0.5em;
+    width: 100%;
+    line-height: 1.5;
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical05 main .wrap2 .att p:nth-child(2) {
+    width: 100%;
+    line-height: 1.5;
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: right;
+    color: #595757;
+  }
+  .medical#medical05 main .med01 .tit03 {
+    margin-top: 2em;
+    text-align: left;
+  }
+  .medical#medical05 main .med02 .wrap {
+    margin: 0 auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -ms-flex-pack: space-between;
+  }
+  .medical#medical05 main .med02 .wrap p:first-child {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: center;
+    color: #EE7800;
+    line-height: 1.5;
+    -webkit-align-self: center;
+    -ms-align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 100%;
+  }
+  .medical#medical05 main .med02 .wrap p:nth-child(2) {
+    -webkit-align-self: center;
+    -ms-align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    text-align: center;
+    width: 3%;
+  }
+  .medical#medical05 main .med02 .wrap p:nth-child(2) img {
+    -webkit-transform: rotatez(90deg);
+            transform: rotatez(90deg);
+  }
+  .medical#medical05 main .med02 .wrap ul {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: center;
+    color: #EE7800;
+    -webkit-align-self: center;
+    -ms-align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    line-height: 1.5;
+    margin: 0;
+    width: 100%;
+  }
+  .medical#medical05 main .med03 .wrap .tit03 {
+    margin-top: 2em;
+    margin-bottom: 0.3em;
+  }
+  .medical#medical05 main .med03 .wrap .tit03:first-child {
+    margin-top: 0;
+  }
+  .medical#medical05 main .med03 .wrap p {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical05 main .med03 .wrap ul {
+    margin: 0;
+  }
+  .medical#medical05 main .med03 .wrap ul li {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+    text-indent: -1em;
+    margin-left: 1em;
+  }
+  .medical#medical05 main .med03 .wrap ul li span {
+    font-family: inherit;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical05 main .med03 .wrap .banner {
+    margin-top: 2em;
+    width: 100%;
+  }
+  .medical#medical05 main .med03 .wrap .banner a:hover {
+    opacity: 0.7;
+  }
+  .medical#medical06 main .med01 .box1__img {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .medical#medical06 main .med01 .box1__img img {
+    width: 60%;
+  }
+  .medical#medical06 main .med01 .box2 .tit03 {
+    margin-bottom: 0.3em;
+  }
+  .medical#medical06 main .med01 .box2 .att__list {
+    text-indent: -1em;
+    margin-left: 1em;
+    font-family: inherit;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical06 main .med01 .box2 .things {
+    margin: 0;
+  }
+  .medical#medical06 main .med01 .box2 .things__list {
+    text-indent: -1em;
+    margin-left: 1em;
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical06 main .med01 .box2 .things__list span {
+    font-family: inherit;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: left;
+    color: #595757;
+  }
+  .medical#medical06 main .med01 .tit03 {
+    margin-top: 2em;
+  }
+}
+
+/* ----------------------------------
+
+notfound
+
+------------------------------------- */
+#notfound main .inner {
+  width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#notfound main .inner .box {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-pack: space-between;
+}
+#notfound main .inner .box__img {
+  width: 20%;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+#notfound main .inner .box__txt {
+  width: 75%;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+#notfound main .inner .box__txt h1 {
+  font-family: inherit;
+  font-size: 60px;
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: left;
+  color: #03a7ea;
+}
+#notfound main .inner .box__txt p {
+  font-family: inherit;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: left;
+  color: #707070;
+}
+#notfound main .inner .box__txt p:last-child {
+  margin-top: 5px;
+}
+@media only screen and (max-width: 840px) {
+  #notfound main .wrap {
+    width: 94%;
+  }
+  #notfound main .wrap .inner {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #notfound main .wrap .box {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  #notfound main .wrap .box__img {
+    width: 30%;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+  #notfound main .wrap .box__txt {
+    width: 100%;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+  #notfound main .wrap .box__txt h1 {
+    font-family: inherit;
+    font-size: 30px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #03a7ea;
+  }
+  #notfound main .wrap .box__txt p {
+    font-family: inherit;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: center;
+    color: #707070;
+    margin-top: 10px;
+  }
+  #notfound main .wrap .box__txt p:last-child {
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #notfound main .inner {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}/*# sourceMappingURL=style.css.map */

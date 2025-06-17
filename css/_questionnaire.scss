@@ -1,0 +1,235 @@
+// main: ./style.scss;
+.questionnaire {
+  padding: 60px 0 0;
+}
+
+.questionnaire__inner {
+  clear: both;
+  max-width: 890px;
+  margin: 0 auto;
+}
+
+.questionnaire__title {
+  font-family: inherit;
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00a7ea;
+  margin-bottom: 30px;
+}
+
+.questionnaire__intro {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.questionnaire__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.questionnaire__nav li {
+  list-style: none;
+  flex: 0 1 calc(25% - 12px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.questionnaire__nav a {
+  border: 1px solid #04a6ea;
+  background: #fff;
+  color: #04a6ea;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+  font-weight: bold;
+  width: 100%;
+  line-height: 1.4;
+}
+
+.questionnaire__nav a:hover {
+  background: #04a6ea;
+  color: #fff;
+}
+
+.questionnaire__nav a i {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #04a6ea;
+}
+
+.questionnaire__nav a:hover i {
+  color: #fff;
+}
+
+.questionnaire__block {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.questionnaire__block h2 {
+  font-size: 23px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  padding-top: 70px;
+  color: #00a7ea;
+}
+
+.questionnaire__block h2 img {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.questionnaire__desc {
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.questionnaire__list--fixed {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.questionnaire__list--fixed li {
+  list-style: none;
+  flex: 0 1 calc(50% - 10px);
+  box-sizing: border-box;
+}
+
+.questionnaire__list--fixed a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #04a6ea;
+  color: #04a6ea;
+  border-radius: 50px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+}
+
+.questionnaire__list--fixed a span {
+  flex: 1;
+  text-align: center;
+}
+
+.questionnaire__list--fixed a:hover {
+  background: #04a6ea;
+  color: #fff;
+}
+
+.questionnaire__list--fixed a i {
+  margin-left: 10px;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+@media only screen and (min-width: 841px) {
+  .questionnaire__content-body {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .questionnaire {
+    padding: 30px 0 0;
+  }
+
+  .questionnaire__nav li {
+    flex: 0 1 calc(50% - 8px);
+  }
+
+  .questionnaire__list--fixed li {
+    flex: 0 1 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .questionnaire__title {
+    font-family: inherit;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #00a7ea;
+    margin-bottom: 30px;
+  }
+
+  .questionnaire__intro {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .questionnaire__nav a {
+    border: 1px solid #04a6ea;
+    background: #fff;
+    color: #04a6ea;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    font-weight: bold;
+    width: 100%;
+    line-height: 1.4;
+  }
+
+  .questionnaire__block h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding-top: 70px;
+    color: #04a6ea;
+  }
+
+  .questionnaire__desc {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .questionnaire__list--fixed a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #04a6ea;
+    color: #04a6ea;
+    border-radius: 50px;
+    padding: 14px 24px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

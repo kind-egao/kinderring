@@ -1,0 +1,95 @@
+// main: ./style.scss;
+/* ----------------------------------
+
+notfound
+
+------------------------------------- */
+#notfound {
+  main {
+    .inner {
+      width: 750px;
+      margin: 0 auto;
+      overflow: hidden;
+
+      .box {
+        margin-top: 100px;
+        @include flexbox();
+        @include justify-content(space-between);
+
+        &__img {
+          width: 20%;
+          align-self: center;
+        }
+
+        &__txt {
+          width: 75%;
+          align-self: center;
+
+          h1 {
+            @include fontstyle(inherit, 60 ,bold ,left ,#03a7ea);
+          }
+
+          p {
+            @include fontstyle(inherit, 20 ,normal ,left ,#707070);
+
+            &:last-child {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 840px) {
+    main {
+      .wrap {
+        width: 94%;
+
+        .inner {
+          width: 100%;
+          margin: 0 auto;
+          overflow: hidden;
+        }
+
+        .box {
+          margin-top: 30px;
+          @include flexbox();
+          @include flex-direction(column);
+
+          &__img {
+            width: 30%;
+            align-self: center;
+          }
+
+          &__txt {
+            width: 100%;
+            align-self: center;
+
+            h1 {
+              @include fontstyle(inherit, 30 ,bold ,center ,#03a7ea);
+            }
+
+            p {
+              @include fontstyle(inherit, 16 ,normal ,center ,#707070);
+              margin-top: 10px;
+
+              &:last-child {
+                margin-top: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 479px) {
+    main {
+      .inner {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+    }
+  }
+}
+//archives

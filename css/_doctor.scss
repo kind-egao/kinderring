@@ -1,0 +1,233 @@
+
+/* ----------------------------------
+
+doctor
+
+------------------------------------- */
+#doctor {
+  main {
+    padding: 60px 0 0;
+    .recruit {
+      background: #f6f7fa;
+      margin-bottom: 70px;
+      padding: 40px 0;
+
+      .wrap {
+        @include wrap(0 auto,830px);
+      }
+      //wrap
+      .box {
+        background: #fff;
+        border: 8px solid #ee7800;
+        padding: 30px 3%;
+        border-radius: 15px;
+
+        &__title {
+          @include fontstyle(inherit, 34 ,bold ,center ,#ee7800);
+          letter-spacing: 0.5px;
+        }
+
+        &__txt {
+          @include fontstyle(inherit, 19 ,normal ,center ,#595757);
+          margin-top: 20px;
+          line-height: 1.6;
+          letter-spacing: 1px;
+        }
+
+        &__connection {
+          @include fontstyle(inherit, 19 ,bold ,center ,#595757);
+          margin-top: 30px;
+        }
+      }
+      //box
+    }
+    //recruit
+    .introduction {
+      .wrap {
+        @include wrap(0 auto,960px);
+        margin-bottom: 80px;
+        padding-bottom: 80px;
+        border-bottom: 1px dashed #000;
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+      }
+      //wrap
+      .inner {
+        @include wrap(0 auto,695px);
+      }
+
+      &__title {
+        margin-bottom: 60px;
+        text-align: center;
+        font-size: 32px;
+        font-size: 3.2rem;
+      }
+
+      &__eyecatch {
+        margin-bottom: 60px;
+      }
+
+      .doctors {
+        &__title {
+          margin-top: 0;
+          margin-bottom: 55px;
+        }
+      }
+
+      .history {
+        margin-bottom: 50px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &__title {
+          @include fontstyle(inherit, 23 ,normal ,left ,#00a7ea);
+          margin-bottom: 10px;
+        }
+
+        &__txt {
+          @include fontstyle(inherit, 20 ,normal ,left ,#231815);
+          margin-bottom: 15px;
+          margin-left: 1em;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          span {
+            @include fontstyle(inherit, 16 ,normal ,left ,#231815);
+            display: block;
+            // margin-left: 1em;
+          }
+        }
+      }
+    }
+    //introduction
+  }
+  @media only screen and (max-width: 840px) {
+    main {}
+  }
+  @media only screen and (max-width: 479px) {
+    main {
+      .recruit {
+        background: none;
+        margin-bottom: 25px;
+        padding: 0;
+
+        .wrap {
+          @include wrap(0 auto,100%);
+          padding: 0;
+        }
+        //wrap
+        .box {
+          background: #fff;
+          border: 4px solid #ee7800;
+          padding: 10px 5%;
+          border-radius: 8px;
+
+          &__title {
+            @include fontstyle(inherit, 14 ,bold ,center ,#ee7800);
+          }
+
+          &__txt {
+            @include fontstyle(inherit, 8 ,normal ,center ,#595757);
+            margin-top: 10px;
+            letter-spacing: 0;
+          }
+
+          &__connection {
+            @include fontstyle(inherit, 10 ,bold ,center ,#595757);
+            margin-top: 10px;
+          }
+        }
+        //box
+      }
+      //recruit
+      .introduction {
+        position: relative;
+
+        .inner {
+          @include wrap(0 auto 0,100%);
+        }
+
+        .wrap {
+          @include wrap(0 auto,100%);
+          padding: 0;
+          margin-bottom: 40px;
+          padding-bottom: 40px;
+          border-bottom: 1px dashed #000;
+
+          &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+
+            .inner {
+              @include wrap(0 auto 0,100%);
+
+              .doctors__title {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+        //wrap
+        &__title {
+          margin-bottom: 20px;
+          text-align: center;
+          font-size: 16px;
+          font-size: 1.6rem;
+        }
+
+        &__eyecatch {
+          position: absolute;
+          left: -10%;
+          width: 120%;
+        }
+
+        .doctors {
+          &__title {
+            margin-top: 180px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .history {
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &__title {
+            @include fontstyle(inherit, 14 ,normal ,left ,#00a7ea);
+            margin-bottom: 10px;
+          }
+
+          &__txt {
+            @include fontstyle(inherit, 14 ,normal ,left ,#231815);
+            margin-bottom: 10px;
+            margin-left: 1em;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            span {
+              @include fontstyle(inherit, 12 ,normal ,left ,#231815);
+              display: block;
+              // margin-left: 1em;
+            }
+          }
+        }
+      }
+      //introduction
+    }
+  }
+}
+//doctor

@@ -1,0 +1,382 @@
+// main: ./style.scss;
+
+/* ----------------------------------
+
+
+
+access
+
+------------------------------------- */
+#access {
+  main {
+    padding: 60px 0 0;
+
+    .tit01 {
+      @include fontstyle(inherit, 32 ,bold ,center ,#00a7ea);
+      margin-bottom: 60px;
+    }
+    .tit02 {
+      @include fontstyle(inherit, 28 ,bold ,center ,#00a7ea);
+      margin-bottom: 30px;
+    }
+
+    .businesshours {
+      background: #f6f7fa;
+      margin: 0;
+
+      .inner {
+        padding: 60px 0;
+
+        .op_img {
+          margin: 0 0 60px;
+
+          img {
+            display: block;
+          }
+        }
+
+        .op_att {
+          @include wrap(0 auto,600px);
+
+          li {
+            @include fontstyle(inherit, 20 ,300 ,left ,#595757);
+            margin-bottom: 40px;
+            border-left: 4px solid #00a7ea;
+            padding-left: 15px;
+            letter-spacing: 0.5px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    //businesshours
+    .access {
+      .inner {
+        padding: 60px 0 0;
+      }
+
+      &__map {}
+
+      &__add {
+        @include fontstyle(inherit, 23 ,400 ,center ,#595757);
+        margin-top: 25px;
+        letter-spacing: 1px;
+      }
+
+      &__gmap {
+        margin-top: 40px;
+        box-sizing: border-box;
+        border: 3px solid #00a7ea;
+
+        iframe {
+          display: block;
+          width: 100%;
+          height: 600px;
+        }
+      }
+
+      &__how {
+        margin-top: 30px;
+            margin-bottom: 100px;
+
+        dt {
+          @include fontstyle(inherit, 22 ,400 ,left ,#ee7800);
+          margin-top: 50px;
+          letter-spacing: 1px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          img {
+            width: 50px;
+          }
+        }
+
+        dd {
+          @include fontstyle(inherit, 22 ,400 ,left ,#00a7ea);
+          margin-top: 5px;
+          margin-left: 0;
+          line-height: 1.7;
+          letter-spacing: 1px;
+
+          span {
+            @include fontstyle(inherit, 17 ,400 ,left ,#00a7ea);
+          }
+        }
+      }
+
+      &__tel {
+        margin-top: 25px;
+        @include fontstyle(inherit, 31 ,400 ,left ,#ee7800);
+
+        span {
+          @include fontstyle(inherit, 21 ,400 ,left ,#ee7800);
+        }
+
+        a {
+          @include fontstyle(inherit, 31 ,400 ,left ,#ee7800);
+          letter-spacing: 2px;
+        }
+      }
+    }
+    //access
+  }
+  @media only screen and (max-width: 840px) {
+    .pcArea {
+      display: none !important;
+    }
+
+    .spArea {
+      display: block !important;
+    }
+
+    main {
+      padding: 30px 0 0;
+
+      .tit01 {
+        @include fontstyle(inherit, 32 ,bold ,center ,#00a7ea);
+        margin-bottom: 30px;
+      }
+      .tit02 {
+        @include fontstyle(inherit, 22 ,bold ,center ,#00a7ea);
+        margin-bottom: 30px;
+      }
+
+      .businesshours {
+        background: #fff;
+        margin: 0;
+
+        .inner {
+          padding: 0;
+          @include wrap(0 auto,100%);
+
+
+          .op_img {
+            margin: 0 0 50px;
+
+            img {
+              display: block;
+            }
+          }
+
+          .op_att {
+            @include wrap(0 auto,100%);
+
+            li {
+              @include fontstyle(inherit, 17 ,300 ,left ,#595757);
+              margin-bottom: 40px;
+              border-left: 4px solid #00a7ea;
+              padding-left: 15px;
+              letter-spacing: 0.5px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+      //businesshours
+      .access {
+
+        .inner {
+          padding: 60px 0 0;
+        }
+
+        &__map {}
+
+        &__add {
+          @include fontstyle(inherit, 20 ,400 ,center ,#595757);
+          margin-top: 25px;
+          letter-spacing: 1px;
+        }
+
+        &__gmap {
+          margin-top: 40px;
+          box-sizing: border-box;
+          border: 3px solid #00a7ea;
+
+          iframe {
+            display: block;
+            width: 100%;
+            height: 400px;
+          }
+        }
+
+        &__how {
+          margin-top: 30px;
+
+          dt {
+            @include fontstyle(inherit, 17 ,400 ,left ,#ee7800);
+            margin-top: 30px;
+            letter-spacing: 1px;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            img {
+              width: 30px;
+            }
+          }
+
+          dd {
+            @include fontstyle(inherit, 17 ,400 ,left ,#00a7ea);
+            margin-top: 5px;
+            margin-left: 0;
+            line-height: 1.7;
+            letter-spacing: 1px;
+
+            span {
+              @include fontstyle(inherit, 17 ,400 ,left ,#00a7ea);
+            }
+          }
+        }
+
+        &__tel {
+          margin-top: 25px;
+          @include fontstyle(inherit, 24 ,400 ,left ,#ee7800);
+
+          span {
+            @include fontstyle(inherit, 17 ,400 ,left ,#ee7800);
+          }
+
+          a {
+            @include fontstyle(inherit, 24 ,400 ,left ,#ee7800);
+            letter-spacing: 2px;
+          }
+        }
+      }
+      //access
+    }
+  }
+  @media only screen and (max-width: 479px) {
+    .pcArea {
+      display: none !important;
+    }
+
+    .spArea {
+      display: block !important;
+    }
+
+        main {
+          padding: 30px 0 0;
+
+          .tit01 {
+            @include fontstyle(inherit,22 ,bold ,center ,#00a7ea);
+            margin-bottom: 30px;
+          }
+
+          .businesshours {
+            background: #fff;
+            margin: 0;
+
+            .inner {
+              padding: 0;
+              @include wrap(0 auto,100%);
+
+
+              .op_img {
+                margin: 0 0 50px;
+
+                img {
+                  display: block;
+                }
+              }
+
+              .op_att {
+                @include wrap(0 auto,100%);
+
+                li {
+                  @include fontstyle(inherit, 14 ,300 ,left ,#595757);
+                  margin-bottom: 30px;
+                  border-left: 4px solid #00a7ea;
+                  padding-left: 10px;
+                  letter-spacing: 0.5px;
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+          //businesshours
+          .access {
+
+            .inner {
+              padding: 60px 0 0;
+            }
+
+            &__map {}
+
+            &__add {
+              @include fontstyle(inherit, 15 ,400 ,center ,#595757);
+              margin-top: 15px;
+              letter-spacing: 0;
+            }
+
+            &__gmap {
+              margin-top: 20px;
+              box-sizing: border-box;
+              border: 1px solid #00a7ea;
+
+              iframe {
+                display: block;
+                width: 100%;
+                height: 250px;
+              }
+            }
+
+            &__how {
+              margin-top: 30px;
+    margin-bottom: 50px;
+
+              dt {
+                @include fontstyle(inherit, 15 ,400 ,left ,#ee7800);
+                margin-top: 30px;
+                letter-spacing: 1px;
+
+                &:first-child {
+                  margin-top: 0;
+                }
+
+                img {
+                  width: 30px;
+                }
+              }
+
+              dd {
+                @include fontstyle(inherit, 15 ,400 ,left ,#00a7ea);
+                margin-top: 5px;
+                margin-left: 0;
+                line-height: 1.4;
+                letter-spacing: 1px;
+
+                span {
+                  @include fontstyle(inherit, 13 ,400 ,left ,#00a7ea);
+                }
+              }
+            }
+
+            &__tel {
+              margin-top: 25px;
+              @include fontstyle(inherit, 15 ,400 ,left ,#ee7800);
+
+              span {
+                @include fontstyle(inherit, 15 ,400 ,left ,#ee7800);
+              }
+
+              a {
+                @include fontstyle(inherit, 20 ,400 ,left ,#ee7800);
+                letter-spacing: 2px;
+              }
+            }
+          }
+          //access
+        }
+  }
+}
+//top
