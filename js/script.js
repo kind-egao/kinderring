@@ -62,6 +62,36 @@ $(document).ready(function () {
   });
 });
 
+// 重要なお知らせの位置調整（PC版のみ）
+if (window.matchMedia('screen and (min-width: 1025px)').matches) {
+  $(document).ready(function () {
+    function adjustImportantPosition() {
+      var $important = $('.p-important');
+      var $footer = $('footer');
+
+      if ($important.length && $footer.length) {
+        var importantBottom = $important.offset().top + $important.outerHeight();
+        var footerTop = $footer.offset().top;
+
+        if (importantBottom >= footerTop) {
+          $important.addClass('-bottom');
+        } else {
+          $important.removeClass('-bottom');
+        }
+      }
+    }
+
+    // 初期実行
+    adjustImportantPosition();
+
+    // ウィンドウリサイズ時にも実行
+    $(window).on('resize', adjustImportantPosition);
+
+    // スクロール時にも実行
+    $(window).on('scroll', adjustImportantPosition);
+  });
+}
+
 /* ----------------------------------
 
 SP版

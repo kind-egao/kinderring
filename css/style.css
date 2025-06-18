@@ -424,6 +424,9 @@ em {
     padding: 0 6%;
     overflow: hidden;
   }
+  .wrap.-important {
+    margin-top: 5rem;
+  }
   .wrap header {
     width: 100%;
     padding-top: 15px;
@@ -847,20 +850,92 @@ em {
   }
 }
 
+.p-important {
+  background: #CF346A;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 4%;
+  min-height: 4rem;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  top: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 1025px) {
+  .p-important {
+    top: inherit;
+    bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-important.-bottom {
+    bottom: 3.8rem;
+  }
+}
+.p-important__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (min-width: 1025px) {
+  .p-important__inner {
+    width: min(100%, 72rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.p-important a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #fff;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 1025px) {
+  .p-important a {
+    font-size: 1.6rem;
+  }
+}
+.p-important a:hover {
+  color: #F4B6B3;
+}
+.p-important span {
+  font-weight: 700;
+  line-height: 1;
+  color: #CF346A;
+  padding: 0.5rem;
+  display: block;
+  border-radius: 5rem;
+  text-align: center;
+  background: #fff;
+  font-size: 1rem;
+  min-width: 5rem;
+}
+@media screen and (min-width: 1025px) {
+  .p-important span {
+    font-size: 1.4rem;
+  }
+}
+
 /* ----------------------------------
 
 TOP
 
 ------------------------------------- */
-#top .slider {
-  margin: 0 0 25px;
-  background: #0095E5;
-}
-@media screen and (min-width: 480px) {
-  #top .slider {
-    background: #0095E5;
-  }
-}
 @media screen and (min-width: 841px) {
   #top .slider {
     background: #0095E5;
@@ -927,11 +1002,11 @@ TOP
 }
 @media screen and (min-width: 1025px) {
   #top .p-news__inner {
-    width: min(100%, 81rem);
+    width: min(100%, 74rem);
     margin-right: auto;
     margin-left: auto;
     margin-top: 6rem;
-    padding: 0 4rem 3rem;
+    padding: 0 2rem 3rem;
     border: 2px solid #0095E5;
     border-radius: 0.8rem;
   }
@@ -974,12 +1049,12 @@ TOP
   display: block;
   top: 0;
   right: 0;
-  width: 7.5rem;
+  width: 5.5rem;
   height: 7.1rem;
   background-image: url(../images/news_img01.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 100% 0;
 }
 @media screen and (min-width: 1025px) {
   #top .p-news h1::after {
@@ -1016,7 +1091,7 @@ TOP
   #top .p-news__list li a {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 #top .p-news__list li a:hover {
@@ -1028,6 +1103,11 @@ TOP
   font-weight: 300;
   line-height: 1.5;
   color: #999;
+}
+@media screen and (min-width: 1025px) {
+  #top .p-news__list li a time {
+    font-size: 1.6rem;
+  }
 }
 #top .p-news__list li a div {
   display: -webkit-box;
@@ -1045,7 +1125,7 @@ TOP
 }
 @media screen and (min-width: 1025px) {
   #top .p-news__list li a p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 #top .p-news__icon {
@@ -1205,6 +1285,14 @@ TOP
   #top .content .inner .department li p {
     width: 186px;
     height: 186px;
+  }
+}
+#top .content .inner .department li p a {
+  position: relative;
+}
+@media screen and (min-width: 841px) {
+  #top .content .inner .department li p a {
+    display: block;
   }
 }
 #top .content .inner .department li p .btn {
@@ -1976,7 +2064,7 @@ single
 }
 #single main .p-single__article h1,
 #archives main .p-single__article h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #0096E5;
   font-weight: 400;
   border-top: 1px solid #0096E5;
@@ -1996,7 +2084,7 @@ single
 }
 #single main .p-single__article h1 span,
 #archives main .p-single__article h1 span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 0.5rem;
   display: block;
@@ -2108,6 +2196,12 @@ single
   line-height: 1.5;
   color: #999;
 }
+@media screen and (min-width: 1025px) {
+  #single main .p-archives__article__list li a time,
+  #archives main .p-archives__article__list li a time {
+    font-size: 1.6rem;
+  }
+}
 #single main .p-archives__article__list li a div,
 #archives main .p-archives__article__list li a div {
   display: -webkit-box;
@@ -2127,7 +2221,7 @@ single
 @media screen and (min-width: 1025px) {
   #single main .p-archives__article__list li a p,
   #archives main .p-archives__article__list li a p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 #single main .p-archives__article__icon,

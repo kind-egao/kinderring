@@ -135,11 +135,63 @@ if (is_page('medical01') || is_page('medical02') || is_page('medical03') || is_p
 }
 ?>
 
+<?php
+$args = array(
+	'post_type' => 'post',
+	'posts_per_page' => 1,
+	'meta_query' => array(
+		array(
+			'key' => 'news_important',
+			'value' => '重要なお知らせ',
+			'compare' => 'LIKE'
+		)
+	),
+	'orderby' => 'date',
+	'order' => 'DESC'
+);
+$important_query = new WP_Query($args);
+$has_important = $important_query->have_posts();
+wp_reset_postdata();
+?>
 
-<body <?php echo $body_id; ?> class="<?php echo $body_class; ?> drawer drawer--right">
+<body <?php echo $body_id; ?> class="<?php echo $body_class; ?> drawer drawer--right<?php echo $has_important ? ' -important' : ''; ?>">
+
+	<?php if ($has_important) : ?>
+		<div class="p-important">
+			<div class="p-important__inner">
+				<?php
+				while ($important_query->have_posts()) : $important_query->the_post();
+				?>
+					<span>重要</span>
+					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				<?php
+				endwhile;
+				wp_reset_postdata();
+				?>
+			</div>
+		</div>
+	<?php endif; ?>
 
 	<!-- ハンバーガーボタン -->
-	<button type="button" class="drawer-toggle drawer-hamburger">
+	<?php
+	$args = array(
+		'post_type' => 'post',
+		'posts_per_page' => 1,
+		'meta_query' => array(
+			array(
+				'key' => 'news_important',
+				'value' => '重要なお知らせ',
+				'compare' => 'LIKE'
+			)
+		),
+		'orderby' => 'date',
+		'order' => 'DESC'
+	);
+	$important_query = new WP_Query($args);
+	$has_important = $important_query->have_posts();
+	wp_reset_postdata();
+	?>
+	<button type="button" class="drawer-toggle drawer-hamburger<?php echo $has_important ? ' -important' : ''; ?>">
 		<span class="sr-only">toggle navigation</span>
 		<span class="drawer-hamburger-icon"></span>
 		<span class="txt">MENU</span>
@@ -176,8 +228,9 @@ if (is_page('medical01') || is_page('medical02') || is_page('medical03') || is_p
 			<li class="dt"><a class="drawer-menu-item" href="<?php echo esc_url(home_url('/link')); ?>">リンク</a></li>
 		</ul>
 	</div>
-	<div class="wrap">
 
+
+	<div class="wrap<?php echo $has_important ? ' -important' : ''; ?>">
 		<header>
 			<div class="hinner">
 				<div class="hl">

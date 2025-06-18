@@ -1,10 +1,9 @@
-
 /*!------------------------------------*\
     Base
 \*!------------------------------------*/
 
 .drawer-open {
-    overflow: hidden!important
+    overflow: hidden !important
 }
 
 .drawer-nav {
@@ -19,62 +18,66 @@
     background-color: #fff;
     overflow: scroll;
 }
+
 .drawer-nav .reserve {
-  margin: 20px auto;
+    margin: 20px auto;
     width: 90%;
 }
-.drawer-nav .reserve a{
-  display: block;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  padding: 15px 3%;
-  border-radius: 5px;
-  border: 1px solid #ee7800;
-  background: rgba(246,179,45,1);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246,179,45,1)), color-stop(38%, rgba(237,107,0,1)), color-stop(100%, rgba(237,107,0,1)));
-  background: -webkit-linear-gradient(top, rgba(246,179,45,1) 0%, rgba(237,107,0,1) 38%, rgba(237,107,0,1) 100%);
-  background: -o-linear-gradient(top, rgba(246,179,45,1) 0%, rgba(237,107,0,1) 38%, rgba(237,107,0,1) 100%);
-  background: -ms-linear-gradient(top, rgba(246,179,45,1) 0%, rgba(237,107,0,1) 38%, rgba(237,107,0,1) 100%);
-  background: linear-gradient(to bottom, rgba(246,179,45,1) 0%, rgba(237,107,0,1) 38%, rgba(237,107,0,1) 100%);
+
+.drawer-nav .reserve a {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 3%;
+    border-radius: 5px;
+    border: 1px solid #ee7800;
+    background: rgba(246, 179, 45, 1);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246, 179, 45, 1)), color-stop(38%, rgba(237, 107, 0, 1)), color-stop(100%, rgba(237, 107, 0, 1)));
+    background: -webkit-linear-gradient(top, rgba(246, 179, 45, 1) 0%, rgba(237, 107, 0, 1) 38%, rgba(237, 107, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(246, 179, 45, 1) 0%, rgba(237, 107, 0, 1) 38%, rgba(237, 107, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(246, 179, 45, 1) 0%, rgba(237, 107, 0, 1) 38%, rgba(237, 107, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(246, 179, 45, 1) 0%, rgba(237, 107, 0, 1) 38%, rgba(237, 107, 0, 1) 100%);
 }
 
 
 .drawer-nav .tel {
-  margin: 20px auto;
+    margin: 20px auto;
     width: 90%;
 }
-.drawer-nav .tel a{
-  display: block;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  padding: 15px 3%;
-  border-radius: 5px;
-  border: 1px solid #ee7800;
-  background: rgba(246,179,45,1);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246,179,45,1)), color-stop(38%, rgba(237,107,0,1)), color-stop(100%, rgba(237,107,0,1)));
-  background: -webkit-linear-gradient(top, rgba(246,179,45,1) 0%, rgba(237,107,0,1) 38%, rgba(237,107,0,1) 100%);
-  background: -o-linear-gradient(top, rgba(246,179,45,1) 0%, rgba(237,107,0,1) 38%, rgba(237,107,0,1) 100%);
-  background: -ms-linear-gradient(top, rgba(246,179,45,1) 0%, rgba(237,107,0,1) 38%, rgba(237,107,0,1) 100%);
-  background: linear-gradient(to bottom, rgba(246,179,45,1) 0%, rgba(237,107,0,1) 38%, rgba(237,107,0,1) 100%);
+
+.drawer-nav .tel a {
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 3%;
+    border-radius: 5px;
+    border: 1px solid #ee7800;
+    background: rgba(246, 179, 45, 1);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(246, 179, 45, 1)), color-stop(38%, rgba(237, 107, 0, 1)), color-stop(100%, rgba(237, 107, 0, 1)));
+    background: -webkit-linear-gradient(top, rgba(246, 179, 45, 1) 0%, rgba(237, 107, 0, 1) 38%, rgba(237, 107, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(246, 179, 45, 1) 0%, rgba(237, 107, 0, 1) 38%, rgba(237, 107, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(246, 179, 45, 1) 0%, rgba(237, 107, 0, 1) 38%, rgba(237, 107, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(246, 179, 45, 1) 0%, rgba(237, 107, 0, 1) 38%, rgba(237, 107, 0, 1) 100%);
 }
 
 
 
 .drawer-nav .recruit {
-  margin: 20px auto;
+    margin: 20px auto;
     width: 90%;
 }
-.drawer-nav .recruit a{
-  display: block;
-  color: #00a7ea;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 3%;
-  border-top: 2px solid #00a7ea;
-  border-bottom: 2px solid #00a7ea;
-  font-size: 14px;
+
+.drawer-nav .recruit a {
+    display: block;
+    color: #00a7ea;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 3%;
+    border-top: 2px solid #00a7ea;
+    border-bottom: 2px solid #00a7ea;
+    font-size: 14px;
 
 }
 
@@ -108,7 +111,7 @@
     margin-bottom: 0;
     padding-bottom: 0;
     list-style: none;
-    overflow:auto;
+    overflow: auto;
 }
 
 .drawer-menu li {
@@ -227,32 +230,38 @@
 \*!------------------------------------*/
 
 .drawer-hamburger {
-  background: #ee7800;
-  position: fixed;
-  z-index: 4;
-  /* top: 0; */
-
-top: -2px;
-  display: block;
-  box-sizing: content-box;
-  width: 4rem;
-  padding: 0;
-  padding-right: 9pt;
-  padding-left: 9pt;
-  padding: 25px 3% 55px;
-  -webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-  transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  border: 0;
-  outline: 0;
+    background: #ee7800;
+    position: fixed;
+    z-index: 4;
+    /* top: 0; */
+    top: -2px;
+    display: block;
+    box-sizing: content-box;
+    width: 4rem;
+    /* padding: 25px 3% 55px; */
+    padding: 15px 3% 40px;
+    -webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    border: 0;
+    outline: 0;
 }
+
+.drawer-hamburger.-important {
+    top: 5rem;
+}
+
+
+
+
 @media only screen and (min-width: 840px) {
 
-.drawer-hamburger{
-  display: none;
+    .drawer-hamburger {
+        display: none;
+    }
 }
-}
+
 .drawer-hamburger:hover {
     cursor: pointer;
     /* background-color: transparent */
@@ -285,11 +294,13 @@ top: -2px;
 .drawer-hamburger-icon:after {
     top: 8px;
 }
-.drawer-hamburger .txt{
-  color: #fff;
+
+.drawer-hamburger .txt {
+    color: #fff;
     position: absolute;
     left: 0;
-    bottom: 25px;
+    /* bottom: 25px; */
+    bottom: 10px;
     width: 100%;
 }
 
@@ -364,6 +375,7 @@ top: -2px;
         display: none;
         visibility: hidden
     }
+
     .drawer--sidebar .drawer-nav {
         display: block;
         -webkit-transform: none;
@@ -378,6 +390,7 @@ top: -2px;
         left: 0;
         border-right: 1px solid #ddd
     }
+
     .drawer--sidebar.drawer--left .drawer-contents {
         margin-left: 12.5rem
     }
@@ -387,6 +400,7 @@ top: -2px;
         right: 0;
         border-left: 1px solid #ddd
     }
+
     .drawer--sidebar.drawer--right .drawer-contents {
         margin-right: 12.5rem
     }
@@ -401,9 +415,11 @@ top: -2px;
     .drawer--sidebar .drawer-nav {
         width: 16.25rem
     }
+
     .drawer--sidebar.drawer--left .drawer-contents {
         margin-left: 16.25rem
     }
+
     .drawer--sidebar.drawer--right .drawer-contents {
         margin-right: 16.25rem
     }
@@ -481,6 +497,7 @@ top: -2px;
         border-bottom: 1px solid #ddd;
         background-color: #fff
     }
+
     .drawer-navbar .drawer-navbar-header {
         position: relative;
         display: block;
@@ -489,20 +506,25 @@ top: -2px;
         padding: 0;
         border: 0
     }
+
     .drawer-navbar .drawer-menu--right {
         float: right
     }
+
     .drawer-navbar .drawer-menu li {
         float: left
     }
+
     .drawer-navbar .drawer-menu-item {
         line-height: 3.75rem;
         padding-top: 0;
         padding-bottom: 0
     }
+
     .drawer-navbar .drawer-hamburger {
         display: none
     }
+
     .drawer-navbar .drawer-nav {
         position: relative;
         left: 0;
@@ -513,6 +535,7 @@ top: -2px;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0)
     }
+
     .drawer-navbar .drawer-menu {
         padding: 0
     }
@@ -523,6 +546,7 @@ top: -2px;
         width: 16.25rem;
         border: 1px solid #ddd
     }
+
     .drawer-navbar .drawer-dropdown-menu-item {
         padding-left: .75rem
     }
@@ -541,7 +565,7 @@ top: -2px;
     background-color: #fff
 }
 
-.drawer-dropdown-menu > li {
+.drawer-dropdown-menu>li {
     width: 100%;
     list-style: none;
     border: none;
@@ -572,7 +596,7 @@ top: -2px;
 
 /*! open */
 
-.drawer-dropdown.open > .drawer-dropdown-menu {
+.drawer-dropdown.open>.drawer-dropdown-menu {
     display: block
 }
 

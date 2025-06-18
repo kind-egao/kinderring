@@ -1,25 +1,27 @@
+@use "sass:math";
+
 @mixin wrap($margin, $width) {
   margin: $margin;
   width: $width;
 }
 
-@mixin fontstyle( $family, $size ,$weight ,$align ,$color ) {
+@mixin fontstyle($family, $size, $weight, $align, $color) {
   font-family: $family;
   font-size: $size+px;
-  font-size: ($size/10)+rem;
-  font-weight:$weight ;
+  font-size: math.div($size, 10)+rem;
+  font-weight: $weight;
   text-align: $align;
   color: $color;
 }
 
 
 @media only screen and (max-width: 768px) {
-  @mixin fontstyle( $family, $size ,$weight ,$align ,$color ) {
-    font-size: ($size/2)+px;
-    font-size: ($size/10/2)+rem;
+  @mixin fontstyle($family, $size, $weight, $align, $color) {
+    font-size: math.div($size, 2)+px;
+    font-size: math.div(math.div($size, 10), 2)+rem;
   }
 }
-@media only screen and (max-width: 375px) {
 
-}
-  // @include fontstyle("bebas-neue",32,normal ,center ,inherit);
+@media only screen and (max-width: 375px) {}
+
+// @include fontstyle("bebas-neue",32,normal ,center ,inherit);
