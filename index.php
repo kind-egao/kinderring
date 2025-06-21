@@ -20,22 +20,18 @@ $weekday = array(
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_slider01_190731.png" alt="slider01"></li>
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_slider02.png" alt="slider02"></li>
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_slider03.png" alt="slider03"></li>
-        <!-- 			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_slider04.png" alt="slider04"></li> -->
       </ul>
       <ul class="spArea">
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_slider01sp.png" alt="slider01"></li>
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_slider02sp.png" alt="slider02"></li>
         <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_slider03sp.png" alt="slider03"></li>
-        <!-- 			<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_slider04sp.png" alt="slider04"></li> -->
       </ul>
       <div class="arrows">
         <div class="slick-next">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_sliderNext.png" alt="next" class="">
-          <!-- <i class="fas fa-angle-right" class="spArea"></i> -->
         </div>
         <div class="slick-prev">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/index_sliderPrev.png" alt="prev" class="">
-          <!-- <i class="fas fa-angle-left" class="spArea"></i> -->
         </div>
       </div>
     </div>
@@ -46,7 +42,7 @@ $weekday = array(
   <div class="p-news__inner">
     <h1>クリニックだより</h1>
     <ul class="p-news__list">
-      <?php query_posts('post_type=post&showposts=3'); ?>
+      <?php query_posts('post_type=post&showposts=5'); ?>
       <?php if (have_posts()): while (have_posts()): the_post(); ?>
           <li>
             <a href="<?php the_permalink(); ?>">
@@ -57,6 +53,8 @@ $weekday = array(
                       $day = date('D', strtotime($post_date));
                       echo $date . '（' . $weekday[$day] . '）';
                       ?></time>
+              </div>
+              <p><?php the_title(); ?>
                 <?php
                 // 新着記事の判定（7日以内）
                 $seven_days_ago = date('Y-m-d', strtotime('-7 days'));
@@ -67,9 +65,7 @@ $weekday = array(
                 if (get_post_meta(get_the_ID(), 'news_important', true)) {
                   echo '<span class="p-news__icon -important">重要</span>';
                 }
-                ?>
-              </div>
-              <p><?php the_title(); ?></p>
+                ?></p>
             </a>
           </li>
       <?php endwhile;

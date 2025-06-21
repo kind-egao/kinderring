@@ -102,6 +102,7 @@ TOP
                 padding: 0 2rem 3rem;
                 border: 2px solid #0095E5;
                 border-radius: .8rem;
+                padding: 2.5rem 2rem;
             }
         }
 
@@ -118,14 +119,16 @@ TOP
 
             @media screen and (min-width:1025px) {
                 font-size: 3.2rem;
-                min-height: 12.5rem;
+                min-height: auto;
                 align-items: flex-end;
-                margin-top: -2.5rem;
-                line-height: 2.5;
+                // margin-top: -2.5rem;
+                // line-height: 2.5;
+                line-height: 1.5;
+                padding-bottom: 1rem;
             }
 
             &::after {
-                content: "";
+                // content: "";
                 position: absolute;
                 display: block;
                 top: 0;
@@ -167,7 +170,6 @@ TOP
                 a {
                     padding-top: 1.5rem;
                     padding-bottom: 1.5rem;
-                    font-size: 1.4rem;
                     line-height: 1.5;
                     display: block;
                     padding-left: 1rem;
@@ -175,9 +177,11 @@ TOP
                     transition: all 0.3s linear;
 
                     @media screen and (min-width:1025px) {
-                        padding-top: 2rem;
-                        padding-bottom: 2rem;
-                        font-size: 1.8rem;
+                        padding-top: 1.5rem;
+                        padding-bottom: 1.5rem;
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 1.5rem;
                     }
 
                     &:hover {
@@ -200,13 +204,21 @@ TOP
                         display: flex;
                         align-items: center;
                         gap: 0 0.5rem;
+
+                        @media screen and (min-width:1025px) {
+                            width: 100%;
+                        }
                     }
 
                     p {
                         margin-top: .5rem;
+                        font-size: 1.4rem;
 
                         @media screen and (min-width:1025px) {
-                            font-size: 1.8rem;
+                            margin-top: 0;
+                            font-size: 1.6rem;
+                            min-width: calc(100% - 18rem);
+
 
                         }
                     }
@@ -223,6 +235,7 @@ TOP
 
             @media screen and (min-width:1025px) {
                 font-size: 1.2rem;
+                margin-left: .5rem;
             }
 
             &.-new {
@@ -246,7 +259,7 @@ TOP
             transition: all 0.3s linear;
 
             @media screen and (min-width:1025px) {
-                margin-top: 3rem;
+                margin-top: 2rem;
                 font-size: 1.6rem;
             }
 
